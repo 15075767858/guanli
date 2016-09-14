@@ -6,8 +6,6 @@
  * Time: 下午7:11
  */
 
-echo __FILE__;
-exit();
 require_once(dirname(__FILE__) . "/include/common.inc.php");
 
 
@@ -17,19 +15,20 @@ $resArr = array();
 if ($par) {
 
     $vipId = call_user_func($par, $dsql, $_REQUEST);
-
     if ($vipId > 0) {
         $resArr['vipId'] = $vipId;
     } else {
         $resArr['isError'] = 1;
         $resArr['errorInfo'] = "存储失败。";
     }
+
 }
 
 echo json_encode($resArr);
 
 function addVipBaseInfo($dsql, $arr)
 {
+
     $hb_vipCardNumber = $arr['vipCardNumber'];
     $hb_vipName = $arr['vipName'];
     $hb_vipSex = $arr['vipSex'];

@@ -12,6 +12,9 @@ Ext.define('guanli.view.vip.VipAddImagesFieldContainer', {
     },
     initComponent: function () {
         var me = this;
+        me.getImages=function(){
+
+        }
         me.items = [
             {
                 xtype: "button",

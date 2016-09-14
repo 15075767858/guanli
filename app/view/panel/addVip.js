@@ -51,7 +51,7 @@ Ext.define('guanli.view.panel.addVip', {
             }
 
             var url = 'http://bxu2341910074.my3w.com/vip_add.php?par=' + me.addUrl
-            //url = 'resources/vip_add.php?par='+me.addUrl
+            url = 'resources/vip_add.php?par='+me.addUrl
             My.Ajax(url,
                 data,
                 function (response) {
@@ -92,10 +92,10 @@ Ext.define('guanli.view.panel.addVip', {
                 return ojson;
             },
             items: [
-                {
+                /*{
                     xtype: "hiddenfield",
                     name: "id"
-                },
+                },*/
                 {
                     fieldLabel: "会员卡编号",
                     name: "vipCardNumber",
