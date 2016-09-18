@@ -6,6 +6,7 @@
 Ext.define('guanli.Application', {
     extend: 'Ext.app.Application',
 
+
     name: 'guanli',
 
     stores: [
@@ -29,7 +30,11 @@ Ext.define('guanli.Application', {
     }
 });
 
-My={};
+My = {};
+My.vipAddUrl="resources/vip_create.php?par=";
+My.vipReadUrl="resources/vip_read.php?par=";
+
+My.isDebug = true;
 My.Ajax = function (url, params, success) {
     Ext.Ajax.request({
         url: url,
@@ -49,3 +54,21 @@ My.AjaxPost = function (url, params, success) {
         success: success
     });
 }
+My.AjaxJsonP = function (url, params, success) {
+    var data = {
+        url: url,
+        params: params,
+        //timeout: 3000,
+        success: success,
+
+        failure: success
+    }
+
+    Ext.data.JsonP.request(data)
+
+}
+
+
+
+
+

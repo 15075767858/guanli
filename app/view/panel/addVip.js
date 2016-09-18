@@ -3,71 +3,135 @@ Ext.define('guanli.view.panel.addVip', {
     xtype: "addVipPanel",
     requires: [
         'guanli.view.panel.addVipController',
-        'guanli.view.panel.addVipModel'
+        'guanli.view.panel.addVipModel',
+        "guanli.model.addVipBaseInfo"
     ],
+
     scrollable: true,
     controller: 'panel-addvip',
-    viewModel: {
-        type: 'panel-addvip'
-    },
+    /*viewModel: {
+     type: 'panel-addvip'
+     },*/
     width: "100%",
     height: "100%",
     title: "增加会员",
-
+    vipId: 0,
     tbar: [
         {
             text: "提交", handler: function (button) {
-
             var formPanel = button.up("form")
+
+            var baseInfo = formPanel.getComponent("vipBaseInfo")
+            var vipId = baseInfo.addCommit();
+            formPanel.viewModel.set('vipId', vipId);
             var items = formPanel.items.items;
             for (var i = 0; i < items.length; i++) {
+                if (items[i].id == baseInfo.id) {
+                    continue
+                }
                 if (items[i].addCommit) {
-                    //console.log(items[i].addCommit)
-                    items[i].addCommit();
+
+                    items[i].addCommit(vipId);
                 }
             }
+        }
+        },
+        {
+            text: "提交会员基本信息", handler: function (button) {
+            var formPanel = button.up("form")
+            var items = formPanel.items.items;
+            items[0].addCommit()
         }
         }
     ],
-    defaults: {
-        xtype: "fieldset",
-        //xtype: "form",
-        //bodyPadding:10,
-        defaultType: "textfield",
-        width: "100%",
-        collapsible: true,
-        layout: {
-            type: "table",
-            columns: 10,
-            tdAttrs: {
-                style: 'padding:0 5px 0 15px;'
-            }
-        },
-        addCommit: function () {
-            var me = this;
-            var data = me.getFormData();
-            if (!data) {
-                return;
-            }
+    initComponent: function () {
+        var me = this;
+        me.viewModel = Ext.create('guanli.view.panel.addVipModel')
 
-            var url = 'http://bxu2341910074.my3w.com/vip_add.php?par=' + me.addUrl
-            url = 'resources/vip_add.php?par='+me.addUrl
-            My.Ajax(url,
-                data,
-                function (response) {
-                    var resJson = Ext.decode(response.responseText)
-                    if (!resJson.isError) {
-                        if (resJson.vipId) {
-                            me.setVipId(resJson.vipId);
+        console.log(me.viewModel)
+        me.defaults = {
+            xtype: "fieldset",
+            //xtype: "form",
+            //bodyPadding:10,
+            defaultType: "textfield",
+            width: "100%",
+            collapsible: true,
+            layout: {
+                type: "table",
+                columns: 10,
+                tdAttrs: {
+                    style: 'padding:0 5px 0 15px;'
+                }
+            },
+
+            getVipId: function (title) {
+                console.log(me.vipId)
+                me.lookupViewModel().get('vipId')
+                return me.vipId;
+            },
+
+            getFormData: function () {
+                var me = this;
+                var grid = me.down('grid');
+                //var vipId = me.getVipId(me.title);
+
+                if (grid) {
+                    var store = grid.store;
+                    var arr = [];
+                    for (var i = 0; i < store.getCount(); i++) {
+                        var data = store.getAt(i).getData();
+                        //data.vipId = vipId;
+                        arr.push(data);
+                    }
+                    return arr;
+                } else {
+                    var items = me.items.items;
+                    var ojson = {};
+                    for (var i = 0; i < items.length; i++) {
+                        if (!items[i].disabled) {
+                            var name = items[i].name;
+                            ojson[name] = items[i].getRawValue();
                         }
+                    }
+                    //ojson['vipId'] = vipId;
+                    return ojson;
+                }
+            },
+            
+            setFormData:function(data){
+                var me=this;
+                me.formData=data;
+
+            },
+            addCommit: function (vipId) {
+                var me = this;
+                var data = me.getFormData();
+                if (Ext.isArray(data)) {
+                    for (var i = 0; i < data.length; i++) {
+                        data[i].hb_vipId=vipId;
+                        My.AjaxPost(My.vipAddUrl + me.addUrl, data[i], success)
+                    }
+                } else {
+                    data.hb_vipId=vipId;
+                    My.AjaxPost(My.vipAddUrl + me.addUrl, data, success)
+                }
+                function success(response) {
+                    var resJson = Ext.decode(response.responseText)
+                    if (resJson.vipId) {
                     } else {
                         Ext.Msg.alert("消息", "存储会员基本信息失败,失败原因" + resJson['errorInfo']);
                     }
+                    if (!resJson.isError) {
+                    } else {
+                    }
+
                 }
-            )
+            }
 
         }
+        me.callParent();
     },
+
     items: [
         {
             title: "会员基本信息",
@@ -75,85 +139,105 @@ Ext.define('guanli.view.panel.addVip', {
                 width: "100%",
                 colspan: 3,
             },
+            itemId: "vipBaseInfo",
             addUrl: "addVipBaseInfo",
+            readUrl:"readVipBaseInfo",
             setVipId: function (id) {
                 var me = this;
-                var formPanel = me.up("form");
-                formPanel.vipId = id;
+                var viewModel = me.lookupViewModel()
+                console.log(viewModel)
+                viewModel.set("vipId", id)
+                var form = me.up("form");
+                form.vipId = id;
             },
-            getFormData: function () {
+            addCommit: function () {
                 var me = this;
-                var items = me.items.items;
-                var ojson = {};
-                for (var i = 0; i < items.length; i++) {
-                    var name = items[i].name;
-                    ojson[name] = items[i].getRawValue();
-                }
-                return ojson;
+                var vipId = 0;
+                var data = me.getFormData();
+                My.Ajax(My.vipAddUrl + me.addUrl, data, function (response) {
+                    var resJson = Ext.decode(response.responseText)
+                    vipId = resJson.vipId;
+                })
+                return vipId;
             },
+            loadCommit: function (id) {
+                var vipId=id;
+
+            },
+            updateCommit: function () {
+
+            },
+            deleteCommit: function () {
+
+            },
+
             items: [
-                /*{
+                {
                     xtype: "hiddenfield",
-                    name: "id"
-                },*/
+                    name: "hb_id",
+                    /*bind:{
+                     value:"{vipId}"
+                     }*/
+                },
+
                 {
                     fieldLabel: "会员卡编号",
-                    name: "vipCardNumber",
+                    name: "hb_vipCardNumber",
                     colspan: 10
                 }, {
                     fieldLabel: "  姓名",
-                    name: "vipName"
+                    name: "hb_vipName"
                 }, {
                     fieldLabel: "  性别",
-                    name: "vipSex",
+                    name: "hb_vipSex",
                     xtype: "combo",
                     store: ['男', "女"]
                 }, {
                     fieldLabel: "出生日期",
-                    name: "vipBirthDate",
+                    name: "hb_vipBirthDate",
                     format: 'Y-m-d',
                     xtype: "datefield",
                     colspan: 4
                 }, {
                     fieldLabel: "身份证号",
-                    name: "vipIdNumber"
+                    name: "hb_vipIdNumber"
                 }, {
                     fieldLabel: "籍贯",
-                    name: "vipJiGuan"
+                    name: "hb_vipJiGuan"
                 }, {
                     fieldLabel: "职业",
-                    name: "vipJob",
+                    name: "hb_vipJob",
                     colspan: 4
                 }, {
                     fieldLabel: "现住地址",
-                    name: "vipCurAddress"
+                    name: "hb_vipCurAddress"
                 },
                 {
                     fieldLabel: "座机:",
-                    name: "vipTelePhone"
+                    name: "hb_vipTelePhone"
                 }, {
                     fieldLabel: "手机",
-                    name: "vipMobelPhone",
+                    name: "hb_vipMobelPhone",
                     colspan: 4
                 },
                 {
                     fieldLabel: "紧急联系人",
-                    name: "jinjilianxiren"
+                    name: "hb_jinjilianxiren"
                 },
                 {
                     fieldLabel: "座机:",
-                    name: "jjlxrTelePhone"
+                    name: "hb_jjlxrTelePhone"
                 }, {
                     fieldLabel: "手机",
-                    name: "jjlxrMobelPhone",
+                    name: "hb_jjlxrMobelPhone",
                     colspan: 4
                 }, {
                     fieldLabel: "医保卡编号",
-                    name: "yibaokaId",
+                    name: "hb_yibaokaId",
                     colspan: 5
                 }, {
                     fieldLabel: "农合本编号",
-                    name: "nonghebenId",
+                    name: "hb_nonghebenId",
                     colspan: 5
                 }
 
@@ -162,64 +246,52 @@ Ext.define('guanli.view.panel.addVip', {
         {
             title: "会员体检报告",
             defaults: {
-                colspan: 5,
+                colspan: 10,
                 width: "100%"
             },
-            addUrl: "addVipTiJianBaoGao",
 
-            getFormData: function () {
-                var me = this;
-                var items = me.items.items;
-                var ojson = {};
-                for (var i = 0; i < items.length; i++) {
-                    var name = items[i].name
-                    ojson[name] = items[i].getRawValue();
-                }
-                var formPanel = me.up("form");
-                if (!formPanel.vipId) {
-                    Ext.Msg.alert("异常信息", "会员ID不存在");
-                    return null;
-                }
-                ojson['vipId'] = formPanel.vipId;
-                return ojson;
-            },
+            addUrl: "addVipTiJianBaoGao",
+            readUrl:"readVipTiJianBaoGao",
+
+
             items: [
+
                 {
                     fieldLabel: "慢性病",
-                    name: "ManXingBing"
+                    name: "hb_ManXingBing"
                 },
-                Ext.create("guanli.view.vip.VipAddImagesFieldContainer", {
-                    name: "ManXingBingTuPian"
-                }),
+                {
+                    xtype: "imglist",
+                    name: "hb_ManXingBingTuPian"
+                },
                 {
                     fieldLabel: "重大疾病",
-                    name: "ZhongDaJiBing"
+                    name: "hb_ZhongDaJiBing"
                 },
-                Ext.create("guanli.view.vip.VipAddImagesFieldContainer", {
-                    name: "ZhongDaJiBingTuPian"
-                }),
+                {
+                    xtype: "imglist",
+                    name: "hb_ZhongDaJiBingTuPian"
+                },
                 {
                     fieldLabel: "遗传疾病",
-                    name: "YiChuanJiBing"
+                    name: "hb_YiChuanJiBing"
                 },
-
-                Ext.create("guanli.view.vip.VipAddImagesFieldContainer",{
-                    name:"YiChuanJiBingTuPian"
-                }),
-
+                {
+                    xtype: "imglist",
+                    name: "hb_YiChuanJiBingTuPian"
+                },
                 {
                     fieldLabel: "体检情况",
-                    name: "TiJianQingKuang"
+                    name: "hb_TiJianQingKuang"
                 },
-
-                Ext.create("guanli.view.vip.VipAddImagesFieldContainer",{
-                    name:"TiJianQingKuangTuPian"
-                }),
-
+                {
+                    xtype: "imglist",
+                    name: "hb_TiJianQingKuangTuPian"
+                },
                 {
                     fieldLabel: "其他",
                     colspan: 10,
-                    name: "QiTa"
+                    name: "hb_QiTa"
                 }
             ]
         },
@@ -230,24 +302,11 @@ Ext.define('guanli.view.panel.addVip', {
                 width: "100%",
             },
             addUrl: "addVipJiaoFeiJiLu",
+            readUrl:"readVipJiaoFeiJiLu",
 
-            getFormData: function () {
-                var me = this;
-                var grid = me.down('grid');
-                var store = grid.store;
-                var arr = [];
-                for (var i = 0; i < store.getCount(); i++) {
-                    arr.push(store.getAt(i).getData())
-                }
-                var formPanel = me.up("form");
-                if (!formPanel.vipId) {
-                    Ext.Msg.alert("异常信息", "会员ID不存在");
-                    return null;
-                }
-                ojson['vipId'] = formPanel.vipId;
-                return arr;
-            },
+
             layout: "auto",
+
             items: {
                 xtype: "grid",
                 colspan: 10,
@@ -255,28 +314,23 @@ Ext.define('guanli.view.panel.addVip', {
                     ptype: 'cellediting',
                     clicksToEdit: 1
                 },
-                /*tbar:[
-                 {text:"增加一行",handler:"onGridAddClick"},
-                 {text:"删除一行",handler:"onGridDeleteClick"}
-                 ],
-                 listeners: {
-                 selectionchange: 'onGridSelectionChange'
-                 },*/
+
                 store: Ext.create("Ext.data.Store", {
-                    fields: ['riqi', 'jiaofeijine', 'beizhu'],
+                    fields: ['Date', 'JiaoFeiJinE', 'BeiZhu'],
                     data: [
-                        {riqi: "2001-01-02", jiaofeijine: "2", beizhu: ""},
-                        {riqi: "2001-01-02", jiaofeijine: "2", beizhu: ""},
-                        {riqi: "2001-01-02", jiaofeijine: "2", beizhu: ""}
+                        {Date: "2001-01-02", JiaoFeiJinE: "2", BeiZhu: ""},
+                        {Date: "2001-01-02", JiaoFeiJinE: "2", BeiZhu: ""},
+                        {Date: "2001-01-02", JiaoFeiJinE: "2", BeiZhu: ""}
                     ]
                 }),
                 columns: [
                     {
-                        text: '日期', dataIndex: 'riqi',
+                        text: '日期', dataIndex: 'Date',
                         flex: 1,
 
                         xtype: "datecolumn",
-                        format: "Y年m月d日",
+                        format: 'Y-m-d',
+                        //format: "Y年m月d日",
                         editor: {
                             xtype: 'datefield',
                             format: 'Y-m-d'
@@ -284,7 +338,7 @@ Ext.define('guanli.view.panel.addVip', {
                     },
                     {
                         text: '缴费金额',
-                        dataIndex: 'jiaofeijine',
+                        dataIndex: 'JiaoFeiJinE',
                         flex: 1,
                         formatter: "usMoney",
                         editor: {
@@ -292,7 +346,7 @@ Ext.define('guanli.view.panel.addVip', {
                         }
                     },
                     {
-                        text: '备注', dataIndex: 'beizhu', flex: 1, editor: {
+                        text: '备注', dataIndex: 'BeiZhu', flex: 1, editor: {
                         xtype: "textareafield"
                     }
                     }
@@ -306,30 +360,17 @@ Ext.define('guanli.view.panel.addVip', {
                 colspan: 3
             },
             addUrl: "addVipZengSongBaoXian",
+            readUrl:"readVipZengSongBaoXian",
 
-            getFormData: function () {
-                var me = this;
-                var items = me.items.items;
-                var ojson = {};
-                for (var i = 0; i < items.length; i++) {
-                    var name = items[i].name;
-                    ojson[name] = items[i].getRawValue();
-                }
-                var formPanel = me.up("form");
-                if (!formPanel.vipId) {
-                    Ext.Msg.alert("异常信息", "会员ID不存在");
-                    return null;
-                }
-                ojson['vipId'] = formPanel.vipId;
-                return ojson;
-            },
             items: [
-                {fieldLabel: "保险险种"},
-                {fieldLabel: "保险单号"},
-                {fieldLabel: "生效日期", colspan: 4},
-                {fieldLabel: "保险责任", colspan: 6},
+                {fieldLabel: "保险险种", name: "hb_BaoXianXianZhong"},
+                {fieldLabel: "保险单号", name: "hb_BaoXianId"},
+                {fieldLabel: "生效日期", colspan: 4, name: "hb_ShengXiaoDate",format: 'Y-m-d',
+                    xtype: "datefield",},
+                {fieldLabel: "保险责任", colspan: 6, name: "hb_BaoXianZeRen"},
                 {
                     xtype: "fieldcontainer",
+                    disabled: true,
                     fieldLabel: "保险单",
                     colspan: 4,
                     rowspan: 2,
@@ -337,9 +378,11 @@ Ext.define('guanli.view.panel.addVip', {
                         xtype: "button",
                         text: "打开保险单"
                     }
+                    , name: "hb_YiTuoGongSi"
                 },
                 {
                     fieldLabel: "依托公司", xtype: "combo",
+
                     store: [
                         "泰康人寿保险股份有限公司",
                         "中国人寿保险股份有限公司",
@@ -349,6 +392,8 @@ Ext.define('guanli.view.panel.addVip', {
                         "中国人保财险PICC"
                     ],
                     colspan: 6
+                    ,
+                    name: "hb_YiTuoGongSi"
                 },
             ]
         },
@@ -356,29 +401,9 @@ Ext.define('guanli.view.panel.addVip', {
             title: "会员住院记录(病例)",
             layout: "auto",
             addUrl: "addVipZhuYuanJiLu",
-            getFormData: function () {
-                var me = this;
-                var grid = me.down('grid');
-                var store = grid.store;
-                var arr = [];
+            readUrl:"readVipZhuYuanJiLu",
 
-                var formPanel = me.up("form");
-                if (!formPanel.vipId) {
-                    Ext.Msg.alert("异常信息", "会员ID不存在");
-                    return null;
-                }
 
-                for (var i = 0; i < store.getCount(); i++) {
-                    var data = store.getAt(i).getData()
-
-                    data['vipId'] = formPanel.vipId;
-
-                    arr.push(data);
-
-                }
-
-                return arr;
-            },
             items: {
                 xtype: "grid",
                 colspan: 10,
@@ -387,40 +412,43 @@ Ext.define('guanli.view.panel.addVip', {
                     clicksToEdit: 1
                 },
                 store: Ext.create("Ext.data.Store", {
-                    fields: ['ruyuanriqi', 'chuyuanriqi', 'huanzhemingcheng', 'yiyuanmingcheng'],
+
+                    fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_ZhenDuanZhengMing', 'hb_YiYuanMingCheng'],
                     data: [
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4}
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4}
                     ]
                 }),
                 columns: [
                     {
-                        text: '入院日期', dataIndex: 'ruyuanriqi', flex: 2,
+                        text: '入院日期', dataIndex: 'hb_RuYuanDate', flex: 2,
                         xtype: "datecolumn",
-                        format: "Y年m月d日",
+                        format: 'Y-m-d',
+                        //format: "Y年m月d日",
                         editor: {
                             xtype: 'datefield',
                             format: 'Y-m-d'
                         }
                     },
                     {
-                        text: '出院日期', dataIndex: 'chuyuanriqi', flex: 2,
+                        text: '出院日期', dataIndex: 'hb_ChuYuanDate', flex: 2,
                         xtype: "datecolumn",
-                        format: "Y年m月d日",
+                        format: 'Y-m-d',
+                        //format: "Y年m月d日",
                         editor: {
                             xtype: 'datefield',
                             format: 'Y-m-d'
                         }
                     },
                     {
-                        text: '诊断证明/长期医嘱', dataIndex: 'huanzhemingcheng', flex: 6, editor: {
+                        text: '诊断证明/长期医嘱', dataIndex: 'hb_ZhenDuanZhengMing', flex: 6, editor: {
                         xtype: "textareafield"
                     }
                     },
                     {
-                        text: '医院名称', dataIndex: 'yiyuanmingcheng', flex: 2,
+                        text: '医院名称', dataIndex: 'hb_YiYuanMingCheng', flex: 2,
                         editor: {
                             xtype: "textfield"
                         }
@@ -432,17 +460,8 @@ Ext.define('guanli.view.panel.addVip', {
             title: "会员报销记录",
             colspan: 10,
             addUrl: "addVipBaoXiaoJiLu",
+            readUrl:"readVipBaoXiaoJiLu",
 
-            getFormData: function () {
-                var me = this;
-                var grid = me.down('grid');
-                var store = grid.store;
-                var arr = [];
-                for (var i = 0; i < store.getCount(); i++) {
-                    arr.push(store.getAt(i).getData())
-                }
-                return arr;
-            },
             defaults: {
                 width: "100%",
             },
@@ -455,41 +474,43 @@ Ext.define('guanli.view.panel.addVip', {
                     clicksToEdit: 1
                 },
                 store: Ext.create("Ext.data.Store", {
-                    fields: ['ruyuanriqi', 'chuyuanriqi', 'huanzhemingcheng', 'yiyuanmingcheng', 'beizhu'],
+                    fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_HuanZheMingCheng', 'YiYuanMingCheng', 'BeiZhu'],
                     data: [
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4},
-                        {ruyuanriqi: "1", chuyuanriqi: "2", huanzhemingcheng: "3", "yiyuanmingcheng": 4}
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
+                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"}
                     ]
                 }),
                 columns: [
                     {
-                        text: '入院日期', dataIndex: 'ruyuanriqi', flex: 1,
+                        text: '入院日期', dataIndex: 'hb_RuYuanDate', flex: 1,
                         xtype: "datecolumn",
-                        format: "Y年m月d日",
+                        format: 'Y-m-d',
+                        //format: "Y年m月d日",
                         editor: {
                             xtype: 'datefield',
                             format: 'Y-m-d'
                         }
                     },
                     {
-                        text: '出院日期', dataIndex: 'chuyuanriqi', flex: 1,
+                        text: '出院日期', dataIndex: 'hb_ChuYuanDate', flex: 1,
                         xtype: "datecolumn",
-                        format: "Y年m月d日",
+                        format: 'Y-m-d',
+                        //format: "Y年m月d日",
                         editor: {
                             xtype: 'datefield',
                             format: 'Y-m-d'
                         }
                     },
                     {
-                        text: '患者名称', dataIndex: 'huanzhemingcheng', flex: 1,
+                        text: '患者名称', dataIndex: 'hb_HuanZheMingCheng', flex: 1,
                         editor: {
                             xtype: "textfield"
                         }
                     },
                     {
-                        text: '医院名称', dataIndex: 'yiyuanmingcheng', flex: 1,
+                        text: '医院名称', dataIndex: 'YiYuanMingCheng', flex: 1,
                         editor: {
                             xtype: "textfield"
                         }
@@ -502,7 +523,7 @@ Ext.define('guanli.view.panel.addVip', {
                         }
                     },
                     {
-                        text: "备注", dataIndex: "beizhu", flex: 1,
+                        text: "备注", dataIndex: "BeiZhu", flex: 1,
                         editor: {
                             xtype: "textareafield"
                         }
@@ -513,28 +534,20 @@ Ext.define('guanli.view.panel.addVip', {
         {
             title: "其他事项",
             addUrl: "addVipQiTaShiXiang",
-
-            getFormData: function () {
-                var me = this;
-                var items = me.items.items;
-                var ojson = {};
-                for (var i = 0; i < items.length; i++) {
-                    var name = items[i].name;
-                    ojson[name] = items[i].getRawValue();
-                }
-                return ojson;
-            },
+            readUrl:"readVipQiTaShiXiang",
             defaults: {
                 width: "100%",
                 colspan: 10
             },
             items: [
-                {fieldLabel: "1", name: "QiTaShiXiang1"},
-                {fieldLabel: "2", name: "QiTaShiXiang2"},
-                {fieldLabel: "3", name: "QiTaShiXiang3"},
-                {fieldLabel: "4", name: "QiTaShiXiang4"}
+                {fieldLabel: "1", name: "hb_ShiXiang1"},
+                {fieldLabel: "2", name: "hb_ShiXiang2"},
+                {fieldLabel: "3", name: "hb_ShiXiang3"},
+                {fieldLabel: "4", name: "hb_ShiXiang4"}
             ]
         }
     ],
-})
-;
+});
+
+
+
