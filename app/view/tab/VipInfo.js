@@ -9,14 +9,21 @@ Ext.define('guanli.view.tab.VipInfo', {
         'guanli.view.tab.VipInfoModel',
         "guanli.view.panel.addVip",
         "guanli.view.panel.BaoXianXinXi",
-        "guanli.view.panel.ImgList"
+        "guanli.view.panel.ImgList",
+        "guanli.view.panel.QueryVip",
+        "guanli.model.addVipBaseInfo"
     ],
     title: "会员信息管理",
+    id:"vipInfoManger",
     controller: 'tab-vipinfo',
     viewModel: {
         type: 'tab-vipinfo'
     },
     items: [
+        {
+            title: "查找会员",
+            xtype:"QueryVip"
+        },
         {
             xtype: "addVipPanel"
         },
@@ -28,8 +35,6 @@ Ext.define('guanli.view.tab.VipInfo', {
             title: "删除会员"
         }, {
             title: "修改会员"
-        }, {
-            title: "查找会员"
         }
     ],
 

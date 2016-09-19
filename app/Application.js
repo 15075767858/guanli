@@ -31,6 +31,7 @@ Ext.define('guanli.Application', {
 });
 
 My = {};
+My.mainUrl='resources/main.php?par='
 My.vipAddUrl="resources/vip_create.php?par=";
 My.vipReadUrl="resources/vip_read.php?par=";
 

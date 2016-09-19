@@ -3,8 +3,7 @@ Ext.define('guanli.view.panel.addVip', {
     xtype: "addVipPanel",
     requires: [
         'guanli.view.panel.addVipController',
-        'guanli.view.panel.addVipModel',
-        "guanli.model.addVipBaseInfo"
+        'guanli.view.panel.addVipModel'
     ],
 
     scrollable: true,
@@ -21,7 +20,7 @@ Ext.define('guanli.view.panel.addVip', {
             text: "提交", handler: function (button) {
             var formPanel = button.up("form")
 
-            var baseInfo = formPanel.getComponent("vipBaseInfo")
+            var baseInfo = formPanel.getComponent("vipBaseInfo");
             var vipId = baseInfo.addCommit();
             formPanel.viewModel.set('vipId', vipId);
             var items = formPanel.items.items;
@@ -38,12 +37,31 @@ Ext.define('guanli.view.panel.addVip', {
         },
         {
             text: "提交会员基本信息", handler: function (button) {
-            var formPanel = button.up("form")
+            var formPanel = button.up("form");
+
             var items = formPanel.items.items;
+
             items[0].addCommit()
         }
         }
     ],
+    readVipInfo: function (data) {
+        var id = data.id;
+        console.log(data)
+        var me = this;
+        var items = me.items.items;
+
+        for (var i = 0; i < items.length; i++) {
+            if(i!=0){
+            My.Ajax(My.vipReadUrl + items[i].readUrl, {vipId: id}, function (response) {
+                items[i].loadFormData(Ext.decode(response.responseText))
+            })
+            }else{
+                items[i].loadFormData(data)
+            }
+        }
+
+    },
     initComponent: function () {
         var me = this;
         me.viewModel = Ext.create('guanli.view.panel.addVipModel')
@@ -97,22 +115,32 @@ Ext.define('guanli.view.panel.addVip', {
                     return ojson;
                 }
             },
-            
-            setFormData:function(data){
-                var me=this;
-                me.formData=data;
 
+            setFormData: function (data) {
+                var me = this;
+                me.formData = data;
+
+            },
+            loadFormData: function (vipId) {
+                var data = null;
+                My.Ajax(My.vipReadUrl + me.readUrl, {vipId: vipId}, function (response) {
+
+                    data = Ext.decode(response.responseText)
+                    console.log(data)
+
+                })
+                return data;
             },
             addCommit: function (vipId) {
                 var me = this;
                 var data = me.getFormData();
                 if (Ext.isArray(data)) {
                     for (var i = 0; i < data.length; i++) {
-                        data[i].hb_vipId=vipId;
+                        data[i].hb_vipId = vipId;
                         My.AjaxPost(My.vipAddUrl + me.addUrl, data[i], success)
                     }
                 } else {
-                    data.hb_vipId=vipId;
+                    data.hb_vipId = vipId;
                     My.AjaxPost(My.vipAddUrl + me.addUrl, data, success)
                 }
                 function success(response) {
@@ -138,10 +166,11 @@ Ext.define('guanli.view.panel.addVip', {
             defaults: {
                 width: "100%",
                 colspan: 3,
+                value: "阿斯顿发"
             },
             itemId: "vipBaseInfo",
             addUrl: "addVipBaseInfo",
-            readUrl:"readVipBaseInfo",
+            readUrl: "readVipBaseInfo",
             setVipId: function (id) {
                 var me = this;
                 var viewModel = me.lookupViewModel()
@@ -160,8 +189,12 @@ Ext.define('guanli.view.panel.addVip', {
                 })
                 return vipId;
             },
+
             loadCommit: function (id) {
-                var vipId=id;
+                var vipId = id;
+                My.Ajax(My.vipReadUrl + me.readUrl, {vipId: vipId}, function () {
+
+                })
 
             },
             updateCommit: function () {
@@ -179,7 +212,11 @@ Ext.define('guanli.view.panel.addVip', {
                      value:"{vipId}"
                      }*/
                 },
-
+                {
+                    xtype: "hiddenfield",
+                    value: new Date().getTime(),
+                    name: "CreateDate"
+                },
                 {
                     fieldLabel: "会员卡编号",
                     name: "hb_vipCardNumber",
@@ -251,8 +288,7 @@ Ext.define('guanli.view.panel.addVip', {
             },
 
             addUrl: "addVipTiJianBaoGao",
-            readUrl:"readVipTiJianBaoGao",
-
+            readUrl: "readVipTiJianBaoGao",
 
             items: [
 
@@ -302,7 +338,7 @@ Ext.define('guanli.view.panel.addVip', {
                 width: "100%",
             },
             addUrl: "addVipJiaoFeiJiLu",
-            readUrl:"readVipJiaoFeiJiLu",
+            readUrl: "readVipJiaoFeiJiLu",
 
 
             layout: "auto",
@@ -360,13 +396,15 @@ Ext.define('guanli.view.panel.addVip', {
                 colspan: 3
             },
             addUrl: "addVipZengSongBaoXian",
-            readUrl:"readVipZengSongBaoXian",
+            readUrl: "readVipZengSongBaoXian",
 
             items: [
                 {fieldLabel: "保险险种", name: "hb_BaoXianXianZhong"},
                 {fieldLabel: "保险单号", name: "hb_BaoXianId"},
-                {fieldLabel: "生效日期", colspan: 4, name: "hb_ShengXiaoDate",format: 'Y-m-d',
-                    xtype: "datefield",},
+                {
+                    fieldLabel: "生效日期", colspan: 4, name: "hb_ShengXiaoDate", format: 'Y-m-d',
+                    xtype: "datefield",
+                },
                 {fieldLabel: "保险责任", colspan: 6, name: "hb_BaoXianZeRen"},
                 {
                     xtype: "fieldcontainer",
@@ -401,7 +439,7 @@ Ext.define('guanli.view.panel.addVip', {
             title: "会员住院记录(病例)",
             layout: "auto",
             addUrl: "addVipZhuYuanJiLu",
-            readUrl:"readVipZhuYuanJiLu",
+            readUrl: "readVipZhuYuanJiLu",
 
 
             items: {
@@ -415,10 +453,30 @@ Ext.define('guanli.view.panel.addVip', {
 
                     fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_ZhenDuanZhengMing', 'hb_YiYuanMingCheng'],
                     data: [
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_ZhenDuanZhengMing: "3", "hb_YiYuanMingCheng": 4}
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_ZhenDuanZhengMing: "3",
+                            "hb_YiYuanMingCheng": 4
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_ZhenDuanZhengMing: "3",
+                            "hb_YiYuanMingCheng": 4
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_ZhenDuanZhengMing: "3",
+                            "hb_YiYuanMingCheng": 4
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_ZhenDuanZhengMing: "3",
+                            "hb_YiYuanMingCheng": 4
+                        }
                     ]
                 }),
                 columns: [
@@ -460,7 +518,7 @@ Ext.define('guanli.view.panel.addVip', {
             title: "会员报销记录",
             colspan: 10,
             addUrl: "addVipBaoXiaoJiLu",
-            readUrl:"readVipBaoXiaoJiLu",
+            readUrl: "readVipBaoXiaoJiLu",
 
             defaults: {
                 width: "100%",
@@ -476,10 +534,34 @@ Ext.define('guanli.view.panel.addVip', {
                 store: Ext.create("Ext.data.Store", {
                     fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_HuanZheMingCheng', 'YiYuanMingCheng', 'BeiZhu'],
                     data: [
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"},
-                        {hb_RuYuanDate: "2011-8-8", hb_ChuYuanDate: "2011-8-8", hb_HuanZheMingCheng: "3", "YiYuanMingCheng": 4,"BeiZhu":"1"}
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_HuanZheMingCheng: "3",
+                            "YiYuanMingCheng": 4,
+                            "BeiZhu": "1"
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_HuanZheMingCheng: "3",
+                            "YiYuanMingCheng": 4,
+                            "BeiZhu": "1"
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_HuanZheMingCheng: "3",
+                            "YiYuanMingCheng": 4,
+                            "BeiZhu": "1"
+                        },
+                        {
+                            hb_RuYuanDate: "2011-8-8",
+                            hb_ChuYuanDate: "2011-8-8",
+                            hb_HuanZheMingCheng: "3",
+                            "YiYuanMingCheng": 4,
+                            "BeiZhu": "1"
+                        }
                     ]
                 }),
                 columns: [
@@ -534,7 +616,7 @@ Ext.define('guanli.view.panel.addVip', {
         {
             title: "其他事项",
             addUrl: "addVipQiTaShiXiang",
-            readUrl:"readVipQiTaShiXiang",
+            readUrl: "readVipQiTaShiXiang",
             defaults: {
                 width: "100%",
                 colspan: 10

@@ -7,11 +7,13 @@
  */
 
 require_once('mysql_link.php');
+mysqli_query($mysql,"set names utf8");
+
 $par = $_REQUEST['par'];
 
 if ($par) {
 
-    $res = call_user_func($par, $mysql, $_REQUEST) or $res=0;
+    $res = call_user_func($par, $mysql, $_REQUEST) or $res = 0;
     /*if ($vipId > 0) {
         $resArr['vipId'] = $vipId;
     } else {
@@ -25,67 +27,87 @@ if ($par) {
 echo json_encode($res);
 exit;
 
-function readVipBaseInfo($mysql,$arr){
-    $id=$_REQUEST['id'];
-    $sql = "select * from huibang_vipbaseinfo  WHERE id= $id ";
-    return getOne($mysql,$sql);
-}
-function readVipTiJianBaoGao($mysql,$arr){
-    $vipId=$_REQUEST['vipId'];
-    $sql = "select * from huibang_vipTiJianBaoGao WHERE hb_vipId = $vipId";
-    return getOne($mysql,$sql);
+function readVipBaseInfoByItem($mysql, $arr)
+{
+
+    $name=$_REQUEST['name'];
+    $value = $_REQUEST['value'];
+
+    $sql = "select * from huibang_vipbaseinfo  WHERE $name LIKE '%$value%'";
+
+    return getArray($mysql,$sql);
 }
 
-function readVipJiaoFeiJiLu($mysql,$arr){
+function readVipBaseInfo($mysql, $arr)
+{
+    $id = $_REQUEST['id'];
+
+    $sql = "select * from huibang_vipbaseinfo  WHERE id= $id";
+    return getOne($mysql, $sql);
+}
+
+function readVipTiJianBaoGao($mysql, $arr)
+{
+    $vipId = $_REQUEST['vipId'];
+    $sql = "select * from huibang_vipTiJianBaoGao WHERE hb_vipId = $vipId";
+    return getOne($mysql, $sql);
+}
+
+function readVipJiaoFeiJiLu($mysql, $arr)
+{
     //huibang_vipJiaoFeiJiLu
-    $vipId=$_REQUEST['vipId'];
+    $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipJiaoFeiJiLu WHERE hb_vipId= $vipId";
 
-    return getArray($mysql,$sql);
+    return getArray($mysql, $sql);
 }
 
-function readVipZengSongBaoXian($mysql,$arr){
-    $vipId=$_REQUEST['vipId'];
+function readVipZengSongBaoXian($mysql, $arr)
+{
+    $vipId = $_REQUEST['vipId'];
 
     $sql = "select * from huibang_vipZengSongBaoXian WHERE hb_vipId = $vipId";
-    return getOne($mysql,$sql);
+    return getOne($mysql, $sql);
 }
 
-function readVipZhuYuanJiLu($mysql,$arr){
-    $vipId=$_REQUEST['vipId'];
+function readVipZhuYuanJiLu($mysql, $arr)
+{
+    $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipZhuYuanJiLu WHERE hb_vipId= $vipId";
-    return getArray($mysql,$sql);
+    return getArray($mysql, $sql);
 }
 
-function readVipBaoXiaoJiLu($mysql,$arr){
-    $vipId=$_REQUEST['vipId'];
+function readVipBaoXiaoJiLu($mysql, $arr)
+{
+    $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipBaoXiaoJiLu WHERE hb_vipId= $vipId";
-    return getArray($mysql,$sql);
+    return getArray($mysql, $sql);
 }
 
-function readVipQiTaShiXiang($mysql,$arr){
-    $vipId=$_REQUEST['vipId'];
+function readVipQiTaShiXiang($mysql, $arr)
+{
+    $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipQiTaShiXiang WHERE hb_vipId= $vipId";
-    return getOne($mysql,$sql);
+    return getOne($mysql, $sql);
 }
 
 
-function getOne($mysql,$sql){
-    $res=mysqli_query($mysql,$sql);
+function getOne($mysql, $sql)
+{
+    $res = mysqli_query($mysql, $sql);
     $row = mysqli_fetch_array($res);
     return $row;
 }
-function getArray($mysql,$sql){
-    $arr=array();
 
-    $res=mysqli_query($mysql,$sql) or $res=false;
-    if(!$res){
-        echo "没有";
+function getArray($mysql, $sql)
+{
+    $arr = array();
+    $res = mysqli_query($mysql, $sql) or $res = false;
+    if (!$res) {
         return $res;
     }
-    while($row = mysqli_fetch_array($res))
-    {
-        array_push($arr,$row);
+    while ($row = mysqli_fetch_array($res)) {
+        array_push($arr, $row);
     }
     return $arr;
 }

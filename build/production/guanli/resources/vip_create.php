@@ -7,7 +7,6 @@
  */
 
 require_once('mysql_link.php');
-mysqli_set_charset($mysql,'utf-8');
 
 $par = $_REQUEST['par'];
 $resArr = array();
@@ -36,25 +35,23 @@ function execAddSql($mysql,$sql){
 
 function addVipBaseInfo($mysql, $arr)
 {
+    $hb_vipCardNumber = $arr['hb_vipCardNumber'];
+    $hb_vipName = $arr['hb_vipName'];
+    $hb_vipSex = $arr['hb_vipSex'];
+    $hb_vipBirthDate = $arr['hb_vipBirthDate'];
+    $hb_vipIdNumber = $arr['hb_vipIdNumber'];
+    $hb_vipJiGuan = $arr['hb_vipJiGuan'];
+    $hb_vipJob = $arr['hb_vipJob'];
+    $hb_vipCurAddress = $arr['hb_vipCurAddress'];
+    $hb_vipTelePhone = $arr['hb_vipTelePhone'];
+    $hb_vipMobelPhone = $arr['hb_vipMobelPhone'];
+    $hb_jinjilianxiren = $arr['hb_jinjilianxiren'];
+    $hb_jjlxrTelePhone = $arr['hb_jjlxrTelePhone'];
+    $hb_jjlxrMobelPhone = $arr['hb_jjlxrMobelPhone'];
+    $hb_yibaokaId = $arr['hb_yibaokaId'];
+    $hb_nonghebenId = $arr['hb_nonghebenId'];
 
-    $hb_vipCardNumber = iconv('UTF-8', 'gb2312',$arr['hb_vipCardNumber']);
-    $hb_vipName = iconv('UTF-8', 'gb2312',$arr['hb_vipName']);
-    $hb_vipSex = iconv('UTF-8', 'gb2312',$arr['hb_vipSex']);
-    $hb_vipBirthDate = iconv('UTF-8', 'gb2312',$arr['hb_vipBirthDate']);
-    $hb_vipIdNumber = iconv('UTF-8', 'gb2312',$arr['hb_vipIdNumber']);
-    $hb_vipJiGuan = iconv('UTF-8', 'gb2312',$arr['hb_vipJiGuan']);
-    $hb_vipJob = iconv('UTF-8', 'gb2312',$arr['hb_vipJob']);
-    $hb_vipCurAddress = iconv('UTF-8', 'gb2312',$arr['hb_vipCurAddress']);
-    $hb_vipTelePhone = iconv('UTF-8', 'gb2312',$arr['hb_vipTelePhone']);
-    $hb_vipMobelPhone = iconv('UTF-8', 'gb2312',$arr['hb_vipMobelPhone']);
-    $hb_jinjilianxiren = iconv('UTF-8', 'gb2312',$arr['hb_jinjilianxiren']);
-    $hb_jjlxrTelePhone = iconv('UTF-8', 'gb2312',$arr['hb_jjlxrTelePhone']);
-    $hb_jjlxrMobelPhone = iconv('UTF-8', 'gb2312',$arr['hb_jjlxrMobelPhone']);
-    $hb_yibaokaId = iconv('UTF-8', 'gb2312',$arr['hb_yibaokaId']);
-    $hb_nonghebenId = iconv('UTF-8', 'gb2312',$arr['hb_nonghebenId']);
-    $CreateDate=iconv('UTF-8', 'gb2312',$arr['CreateDate']);
-
-    $sql = "insert  `bdm246823269_db`.`huibang_vipbaseinfo`(`CreateDate`,`hb_vipCardNumber`,`hb_vipName`,`hb_vipSex`,`hb_vipBirthDate`,`hb_vipIdNumber`,`hb_vipJiGuan`,`hb_vipJob`,`hb_vipCurAddress`,`hb_vipTelePhone`,`hb_vipMobelPhone`,`hb_jinjilianxiren`,`hb_jjlxrTelePhone`,`hb_jjlxrMobelPhone`,`hb_yibaokaId`,`hb_nonghebenId`) values('$CreateDate','$hb_vipCardNumber','$hb_vipName','$hb_vipSex','$hb_vipBirthDate','$hb_vipIdNumber','$hb_vipJiGuan','$hb_vipJob','$hb_vipCurAddress','$hb_vipTelePhone','$hb_vipMobelPhone','$hb_jinjilianxiren','$hb_jjlxrTelePhone','$hb_jjlxrMobelPhone','$hb_yibaokaId','$hb_nonghebenId');";
+    $sql = "insert  `bdm246823269_db`.`huibang_vipbaseinfo`(`hb_vipCardNumber`,`hb_vipName`,`hb_vipSex`,`hb_vipBirthDate`,`hb_vipIdNumber`,`hb_vipJiGuan`,`hb_vipJob`,`hb_vipCurAddress`,`hb_vipTelePhone`,`hb_vipMobelPhone`,`hb_jinjilianxiren`,`hb_jjlxrTelePhone`,`hb_jjlxrMobelPhone`,`hb_yibaokaId`,`hb_nonghebenId`) values('$hb_vipCardNumber','$hb_vipName','$hb_vipSex','$hb_vipBirthDate','$hb_vipIdNumber','$hb_vipJiGuan','$hb_vipJob','$hb_vipCurAddress','$hb_vipTelePhone','$hb_vipMobelPhone','$hb_jinjilianxiren','$hb_jjlxrTelePhone','$hb_jjlxrMobelPhone','$hb_yibaokaId','$hb_nonghebenId');";
     return  execAddSql($mysql,$sql);
 }
 

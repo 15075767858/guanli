@@ -2,321 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="842dcc27-3af3-41c4-bdcd-bc2877003116" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/mysql_link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/vip_read.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/view/vip/VipAddImagesFieldContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/view/vip/VipAddImagesFieldContainerController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/view/vip/VipAddImagesFieldContainerModel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/common.inc.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/vip_add.php" afterPath="$PROJECT_DIR$/resources/vip_create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-notitle-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-notitle-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-notitle-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-notitle-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn-group/btn-group-default-framed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-large-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-medium-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-small-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-large-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-medium-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-disabled-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-disabled-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-disabled-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-disabled-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-focus-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-default-toolbar-small-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-large-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-medium-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-focus-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-over-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-over-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-over-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-over-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-pressed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-pressed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-pressed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/btn/btn-plain-toolbar-small-pressed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/grid-row-editor-buttons/grid-row-editor-buttons-default-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-collapsed-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-default-framed-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-collapsed-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel-header/panel-header-light-framed-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-default-framed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-default-framed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-default-framed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-default-framed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-light-framed-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-light-framed-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-light-framed-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/panel/panel-light-framed-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-focus-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-focus-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-focus-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-focus-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-bottom-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-focus-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-focus-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-focus-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-focus-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-left-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-focus-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-focus-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-focus-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-focus-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-right-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-focus-active-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-focus-active-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-focus-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-focus-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-over-fbg.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tab/tab-default-top-over-fbg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-default-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-default-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-default-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-default-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-form-invalid-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-form-invalid-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-form-invalid-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/tip/tip-form-invalid-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-bottom-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-bottom-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-bottom-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-bottom-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-collapsed-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-left-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-corners-rtl.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-corners-rtl.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-right-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-top-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-top-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-top-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window-header/window-header-default-top-sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window/window-default-corners.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window/window-default-corners.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window/window-default-sides.gif" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/images/window/window-default-sides.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/theme-capture.png" afterPath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/theme-capture.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/ajax-loader.gif" afterPath="$PROJECT_DIR$/resources/install/images/ajax-loader.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/boxtitle_bg.gif" afterPath="$PROJECT_DIR$/resources/install/images/boxtitle_bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/but_back.gif" afterPath="$PROJECT_DIR$/resources/install/images/but_back.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/but_next.gif" afterPath="$PROJECT_DIR$/resources/install/images/but_next.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/ico-step-now.png" afterPath="$PROJECT_DIR$/resources/install/images/ico-step-now.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/ico-step-succeed.png" afterPath="$PROJECT_DIR$/resources/install/images/ico-step-succeed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/leftbox-tbg.png" afterPath="$PROJECT_DIR$/resources/install/images/leftbox-tbg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/loading1.gif" afterPath="$PROJECT_DIR$/resources/install/images/loading1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/step-ico-bg.png" afterPath="$PROJECT_DIR$/resources/install/images/step-ico-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/top-bg.png" afterPath="$PROJECT_DIR$/resources/install/images/top-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/images/top-logo.png" afterPath="$PROJECT_DIR$/resources/install/images/top-logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/guanli.iml" afterPath="$PROJECT_DIR$/.idea/guanli.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/.cvsignore" afterPath="$PROJECT_DIR$/.sencha/.cvsignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/.gitignore" afterPath="$PROJECT_DIR$/.sencha/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/Boot.js" afterPath="$PROJECT_DIR$/.sencha/app/Boot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/Microloader.js" afterPath="$PROJECT_DIR$/.sencha/app/Microloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/app.defaults.json" afterPath="$PROJECT_DIR$/.sencha/app/app.defaults.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/bootstrap-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/bootstrap-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/build-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/build-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/build.properties" afterPath="$PROJECT_DIR$/.sencha/app/build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/codegen.json" afterPath="$PROJECT_DIR$/.sencha/app/codegen.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/cordova-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/cordova-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/cordova.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/cordova.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/development.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/development.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/development.properties" afterPath="$PROJECT_DIR$/.sencha/app/development.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/ext.properties" afterPath="$PROJECT_DIR$/.sencha/app/ext.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/find-cmd-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/find-cmd-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/init-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/init-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/js-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/js-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/native.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/native.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/native.properties" afterPath="$PROJECT_DIR$/.sencha/app/native.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/package.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/package.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/package.properties" afterPath="$PROJECT_DIR$/.sencha/app/package.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/packager-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/packager-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/page-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/page-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/phonegap-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/phonegap-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/phonegap.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/phonegap.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/plugin.xml" afterPath="$PROJECT_DIR$/.sencha/app/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/production.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/production.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/production.properties" afterPath="$PROJECT_DIR$/.sencha/app/production.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/refresh-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/refresh-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/resolve-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/resolve-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/resources-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/resources-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/sass-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/sass-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/sencha.cfg" afterPath="$PROJECT_DIR$/.sencha/app/sencha.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/slice-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/slice-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/testing.defaults.properties" afterPath="$PROJECT_DIR$/.sencha/app/testing.defaults.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/testing.properties" afterPath="$PROJECT_DIR$/.sencha/app/testing.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/app/watch-impl.xml" afterPath="$PROJECT_DIR$/.sencha/app/watch-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/workspace/plugin.xml" afterPath="$PROJECT_DIR$/.sencha/workspace/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sencha/workspace/sencha.cfg" afterPath="$PROJECT_DIR$/.sencha/workspace/sencha.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application.js" afterPath="$PROJECT_DIR$/app/Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/addVipBaseInfo.js" afterPath="$PROJECT_DIR$/app/model/addVipBaseInfo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/panel/addVip.js" afterPath="$PROJECT_DIR$/app/view/panel/addVip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/panel/addVipModel.js" afterPath="$PROJECT_DIR$/app/view/panel/addVipModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/tab/VipInfo.js" afterPath="$PROJECT_DIR$/app/view/tab/VipInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.css" afterPath="$PROJECT_DIR$/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.js" afterPath="$PROJECT_DIR$/bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/cache.appcache" afterPath="$PROJECT_DIR$/build/production/guanli/cache.appcache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic.json" afterPath="$PROJECT_DIR$/build/production/guanli/classic.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/app.js" afterPath="$PROJECT_DIR$/build/production/guanli/classic/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/guanli-all_1.css" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/guanli-all_1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/classic/resources/guanli-all_2.css" afterPath="$PROJECT_DIR$/build/production/guanli/classic/resources/guanli-all_2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/index.html" afterPath="$PROJECT_DIR$/build/production/guanli/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/modern.json" afterPath="$PROJECT_DIR$/build/production/guanli/modern.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/modern/app.js" afterPath="$PROJECT_DIR$/build/production/guanli/modern/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/resources/vip_add.php" afterPath="$PROJECT_DIR$/build/production/guanli/resources/vip_add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/production/guanli/resources/mysql_link.php" afterPath="$PROJECT_DIR$/build/production/guanli/resources/mysql_link.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/production/guanli/sass/guanli-all.scss" afterPath="$PROJECT_DIR$/build/temp/production/guanli/sass/guanli-all.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/production/guanli/sass/guanli-all.scss.tmp" afterPath="$PROJECT_DIR$/build/temp/production/guanli/sass/guanli-all.scss.tmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/guanli-example.scss" afterPath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/guanli-example.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/guanli-example.scss.tmp" afterPath="$PROJECT_DIR$/build/temp/production/guanli/slicer-temp/guanli-example.scss.tmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classic.json" afterPath="$PROJECT_DIR$/classic.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ftpUpload.sh" afterPath="$PROJECT_DIR$/ftpUpload.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modern.json" afterPath="$PROJECT_DIR$/modern.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/common.inc.php" afterPath="$PROJECT_DIR$/resources/install/common.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/config.cache.inc.php" afterPath="$PROJECT_DIR$/resources/install/config.cache.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/index.html" afterPath="$PROJECT_DIR$/resources/install/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/index.php.bak" afterPath="$PROJECT_DIR$/resources/install/index.php.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/install.inc.php" afterPath="$PROJECT_DIR$/resources/install/install.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/install_lock.txt" afterPath="$PROJECT_DIR$/resources/install/install_lock.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/module-install.php.bak" afterPath="$PROJECT_DIR$/resources/install/module-install.php.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/module_autos.php" afterPath="$PROJECT_DIR$/resources/install/module_autos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/module_autos/changyan_autoreg.php" afterPath="$PROJECT_DIR$/resources/install/module_autos/changyan_autoreg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/modulescache.php" afterPath="$PROJECT_DIR$/resources/install/modulescache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/sql-dfdata.txt" afterPath="$PROJECT_DIR$/resources/install/sql-dfdata.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/sql-dftables.txt" afterPath="$PROJECT_DIR$/resources/install/sql-dftables.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/style.css" afterPath="$PROJECT_DIR$/resources/install/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/tablebox.css" afterPath="$PROJECT_DIR$/resources/install/tablebox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/templates/step-1.html" afterPath="$PROJECT_DIR$/resources/install/templates/step-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/templates/step-2.html" afterPath="$PROJECT_DIR$/resources/install/templates/step-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/templates/step-3.html" afterPath="$PROJECT_DIR$/resources/install/templates/step-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/templates/step-4.html" afterPath="$PROJECT_DIR$/resources/install/templates/step-4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/install/templates/step-5.html" afterPath="$PROJECT_DIR$/resources/install/templates/step-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.sh" afterPath="$PROJECT_DIR$/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/mysql_link.php" afterPath="$PROJECT_DIR$/resources/mysql_link.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/vip_create.php" afterPath="$PROJECT_DIR$/resources/vip_create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/vip_read.php" afterPath="$PROJECT_DIR$/resources/vip_read.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/example/bootstrap.json" afterPath="$PROJECT_DIR$/sass/example/bootstrap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/example/example.css" afterPath="$PROJECT_DIR$/sass/example/example.css" />
     </list>
     <ignored path="guanli.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -345,58 +53,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addVip.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addVip.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/view/panel/addVip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.75500304">
+              <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vip_create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/vip_create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.875">
-              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addVipBaseInfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/addVipBaseInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vip_read.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/vip_read.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-                <marker date="1474200452000" expanded="true" signature="567:600" placeholder="select * fro... huibang_vipbaseinfo" />
-                <marker date="1474200452000" expanded="true" signature="567:601" placeholder="select * fro... huibang_vipbaseinfo" />
-                <marker date="1474200452000" expanded="true" signature="567:617" placeholder="select * fro... huibang_vipbaseinfo" />
-                <marker date="1474200452000" expanded="true" signature="739:776" placeholder="select * fro... huibang_vipTiJianBaoGao" />
-                <marker date="1474200452000" expanded="true" signature="739:794" placeholder="select * fro... huibang_vipTiJianBaoGao" />
-                <marker date="1474200452000" expanded="true" signature="952:1005" placeholder="select * fro... huibang_vipJiaoFeiJiLu" />
-                <marker date="1474200452000" expanded="true" signature="1142:1182" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-                <marker date="1474200452000" expanded="true" signature="1142:1183" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-                <marker date="1474200452000" expanded="true" signature="1142:1200" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-                <marker date="1474200452000" expanded="true" signature="1329:1382" placeholder="select * fro... huibang_vipZhuYuanJiLu" />
-                <marker date="1474200452000" expanded="true" signature="1513:1566" placeholder="select * fro... huibang_vipBaoXiaoJiLu" />
-                <marker date="1474200452000" expanded="true" signature="1698:1752" placeholder="select * fro... huibang_vipQiTaShiXiang" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -405,28 +67,59 @@
         <entry file="file://$PROJECT_DIR$/app/Application.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysql_link.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/mysql_link.php">
+      <file leaf-file-name="QueryVip.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/panel/QueryVip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.009230769">
-              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="vip_read.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/vip_read.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+                <marker date="1474290557000" expanded="true" signature="656:707" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="656:708" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="656:718" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="840:873" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="840:874" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="840:885" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="840:888" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="840:889" placeholder="select * fro... huibang_vipbaseinfo" />
+                <marker date="1474290557000" expanded="true" signature="1017:1054" placeholder="select * fro... huibang_vipTiJianBaoGao" />
+                <marker date="1474290557000" expanded="true" signature="1017:1072" placeholder="select * fro... huibang_vipTiJianBaoGao" />
+                <marker date="1474290557000" expanded="true" signature="1235:1288" placeholder="select * fro... huibang_vipJiaoFeiJiLu" />
+                <marker date="1474290557000" expanded="true" signature="1430:1470" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+                <marker date="1474290557000" expanded="true" signature="1430:1471" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+                <marker date="1474290557000" expanded="true" signature="1430:1488" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+                <marker date="1474290557000" expanded="true" signature="1622:1675" placeholder="select * fro... huibang_vipZhuYuanJiLu" />
+                <marker date="1474290557000" expanded="true" signature="1811:1864" placeholder="select * fro... huibang_vipBaoXiaoJiLu" />
+                <marker date="1474290557000" expanded="true" signature="2001:2055" placeholder="select * fro... huibang_vipQiTaShiXiang" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vip_create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/vip_create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -466,19 +159,20 @@
         <option value="$PROJECT_DIR$/app/view/panel/VipAddImagesFieldContainer.js" />
         <option value="$PROJECT_DIR$/.sencha/app/sencha.cfg" />
         <option value="$PROJECT_DIR$/app/view/vip/VipAddImagesFieldContainer.js" />
-        <option value="$PROJECT_DIR$/app/view/tab/VipInfo.js" />
         <option value="$PROJECT_DIR$/app/model/vipCardNumber:string.js" />
         <option value="$PROJECT_DIR$/app/view/panel/ImgList.js" />
         <option value="$PROJECT_DIR$/app/view/panel/addVipModel.js" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/resources/vip_add.php" />
-        <option value="$PROJECT_DIR$/app/model/addVipBaseInfo.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/Application.js" />
-        <option value="$PROJECT_DIR$/resources/vip_read.php" />
+        <option value="$PROJECT_DIR$/app/model/addVipBaseInfo.js" />
         <option value="$PROJECT_DIR$/resources/vip_create.php" />
         <option value="$PROJECT_DIR$/resources/mysql_link.php" />
+        <option value="$PROJECT_DIR$/resources/vip_read.php" />
+        <option value="$PROJECT_DIR$/app/view/tab/VipInfo.js" />
+        <option value="$PROJECT_DIR$/app/view/panel/QueryVip.js" />
         <option value="$PROJECT_DIR$/app/view/panel/addVip.js" />
-        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -523,7 +217,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -764,6 +457,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -862,23 +556,23 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32851636" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19171484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20327553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07194245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07194245" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -919,20 +613,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classic/src/view/main/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/tab/VipInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1185,24 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/tab/VipInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17298187">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.027641278">
           <caret line="3" column="53" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/panel/ImgList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16433354">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1228,75 +894,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/addVipBaseInfo.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vip_create.php">
+    <entry file="file://$PROJECT_DIR$/app/model/addVipBaseInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.1637356">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="48" />
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="42" />
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="41" />
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="45" />
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="46" />
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="44" />
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="41" />
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="48" />
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="47" />
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="48" />
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="49" />
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="49" />
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="50" />
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="44" />
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/mysql_link.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027692307">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/panel/QueryVipController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/panel/ImgList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14554276">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/tab/VipInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/panel/addVip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="44" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.75500304">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vip_read.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1474200452000" expanded="true" signature="567:600" placeholder="select * fro... huibang_vipbaseinfo" />
-            <marker date="1474200452000" expanded="true" signature="567:601" placeholder="select * fro... huibang_vipbaseinfo" />
-            <marker date="1474200452000" expanded="true" signature="567:617" placeholder="select * fro... huibang_vipbaseinfo" />
-            <marker date="1474200452000" expanded="true" signature="739:776" placeholder="select * fro... huibang_vipTiJianBaoGao" />
-            <marker date="1474200452000" expanded="true" signature="739:794" placeholder="select * fro... huibang_vipTiJianBaoGao" />
-            <marker date="1474200452000" expanded="true" signature="952:1005" placeholder="select * fro... huibang_vipJiaoFeiJiLu" />
-            <marker date="1474200452000" expanded="true" signature="1142:1182" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-            <marker date="1474200452000" expanded="true" signature="1142:1183" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-            <marker date="1474200452000" expanded="true" signature="1142:1200" placeholder="select * fro... huibang_vipZengSongBaoXian" />
-            <marker date="1474200452000" expanded="true" signature="1329:1382" placeholder="select * fro... huibang_vipZhuYuanJiLu" />
-            <marker date="1474200452000" expanded="true" signature="1513:1566" placeholder="select * fro... huibang_vipBaoXiaoJiLu" />
-            <marker date="1474200452000" expanded="true" signature="1698:1752" placeholder="select * fro... huibang_vipQiTaShiXiang" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/mysql_link.php">
+    <entry file="file://$PROJECT_DIR$/app/view/panel/QueryVip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.009230769">
-          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vip_read.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1474290557000" expanded="true" signature="656:707" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="656:708" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="656:718" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="840:873" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="840:874" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="840:885" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="840:888" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="840:889" placeholder="select * fro... huibang_vipbaseinfo" />
+            <marker date="1474290557000" expanded="true" signature="1017:1054" placeholder="select * fro... huibang_vipTiJianBaoGao" />
+            <marker date="1474290557000" expanded="true" signature="1017:1072" placeholder="select * fro... huibang_vipTiJianBaoGao" />
+            <marker date="1474290557000" expanded="true" signature="1235:1288" placeholder="select * fro... huibang_vipJiaoFeiJiLu" />
+            <marker date="1474290557000" expanded="true" signature="1430:1470" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+            <marker date="1474290557000" expanded="true" signature="1430:1471" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+            <marker date="1474290557000" expanded="true" signature="1430:1488" placeholder="select * fro... huibang_vipZengSongBaoXian" />
+            <marker date="1474290557000" expanded="true" signature="1622:1675" placeholder="select * fro... huibang_vipZhuYuanJiLu" />
+            <marker date="1474290557000" expanded="true" signature="1811:1864" placeholder="select * fro... huibang_vipBaoXiaoJiLu" />
+            <marker date="1474290557000" expanded="true" signature="2001:2055" placeholder="select * fro... huibang_vipQiTaShiXiang" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vip_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
