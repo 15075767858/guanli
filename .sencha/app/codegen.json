@@ -304,6 +304,30 @@
         "modelNamespace": "guanli.model",
         "name": "addVipBaseInfo"
       }
+    },
+    "app/model/guanli/model/User.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "guanli",
+        "baseClass": "Ext.data.Model",
+        "fields": "aaa:string:null",
+        "modelFileName": "guanli/model/User",
+        "modelNamespace": "guanli.model",
+        "name": "guanli.model.User"
+      }
+    },
+    "app/model/User.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "guanli",
+        "baseClass": "Ext.data.Model",
+        "fields": "aaa:string:null",
+        "modelFileName": "User",
+        "modelNamespace": "guanli.model",
+        "name": "User"
+      }
     }
   }
 }

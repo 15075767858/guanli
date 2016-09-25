@@ -1,9 +1,6 @@
 Ext.define('guanli.view.tab.VipInfo', {
     extend: 'Ext.tab.Panel',
-
     xtype: "vipInfoTab",
-
-
     requires: [
         'guanli.view.tab.VipInfoController',
         'guanli.view.tab.VipInfoModel',
@@ -19,22 +16,36 @@ Ext.define('guanli.view.tab.VipInfo', {
     viewModel: {
         type: 'tab-vipinfo'
     },
+    bbar:[
+        {text:"查找会员"},
+        {text:"增加会员",handler:function(){
+
+        }}
+    ],
+
+    addChangeVipPanel:function(data){
+        var me=this;
+        console.log(me)
+        var appVipPanel = me.add({
+            xtype:"addVipPanel",
+            title:"修改会员信息"
+        })
+    },
+    defaults:{
+      closable:true,
+    },
     items: [
         {
             title: "查找会员",
             xtype:"QueryVip"
         },
         {
-            xtype: "addVipPanel"
+            xtype: "addVipPanel",
+            title: "增加会员"
         },
         {
-            xtype: "baoxianxinxi"
-        },
-
-        {
-            title: "删除会员"
-        }, {
-            title: "修改会员"
+            xtype: "baoxianxinxi",
+            hidden:true
         }
     ],
 

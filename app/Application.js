@@ -15,26 +15,40 @@ Ext.define('guanli.Application', {
 
     launch: function () {
 
-        //Ext.create("guanli.view.window.LoginWindow")
+        Ext.setGlyphFontFamily("fontFamily")
+
+
+
+                Ext.create("guanli.view.window.LoginWindow")
+
+
         // TODO - Launch the application
+
     },
 
     onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
+        //Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
+        //    function (choice) {
+        //        if (choice === 'yes') {
                     window.location.reload();
-                }
-            }
-        );
+                //}
+            //}
+        //);
     }
 });
 
 My = {};
-My.mainUrl='resources/main.php?par='
-My.vipAddUrl="resources/vip_create.php?par=";
-My.vipReadUrl="resources/vip_read.php?par=";
-
+My.mainUrl = 'resources/main.php?par=';
+My.vipAddUrl = "resources/vip_create.php?par=";
+My.vipReadUrl = "resources/vip_read.php?par=";
+My.vipUpdateUrl = "resources/vip_update.php?par=";
+My.vipDeleteUrl = "resources/vip_delete.php?par=";
+My.userAddUrl = "resources/user_create.php?par=";
+My.userDeleteUrl = "resources/user_delete.php?par=";
+My.userReadUrl = "resources/user_read.php?par=";
+My.userUpdateUrl = "resources/user_update.php?par=";
+My.loginUrl = "resources/user_read.php?par=login"
+My.loginInfo = null;
 My.isDebug = true;
 My.Ajax = function (url, params, success) {
     Ext.Ajax.request({
@@ -51,6 +65,15 @@ My.AjaxPost = function (url, params, success) {
         url: url,
         method: "POST",
         async: false,
+        params: params,
+        success: success
+    });
+}
+My.AjaxPostAsync = function (url, params, success) {
+    Ext.Ajax.request({
+        url: url,
+        method: "POST",
+        async: true,
         params: params,
         success: success
     });

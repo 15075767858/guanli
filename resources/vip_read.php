@@ -7,13 +7,14 @@
  */
 
 require_once('mysql_link.php');
-mysqli_query($mysql,"set names utf8");
+mysqli_query($mysql, "set names utf8");
 
 $par = $_REQUEST['par'];
 
 if ($par) {
 
     $res = call_user_func($par, $mysql, $_REQUEST) or $res = 0;
+
     /*if ($vipId > 0) {
         $resArr['vipId'] = $vipId;
     } else {
@@ -22,20 +23,32 @@ if ($par) {
         $resArr = array_merge($_REQUEST,$resArr);
         $resArr['errorInfo'] = $Par."存储失败。";
     }*/
+
 }
 
 echo json_encode($res);
+mysqli_close($mysql);
+
 exit;
 
 function readVipBaseInfoByItem($mysql, $arr)
 {
 
-    $name=$_REQUEST['name'];
+    $name = $_REQUEST['name'];
     $value = $_REQUEST['value'];
-
-    $sql = "select * from huibang_vipbaseinfo  WHERE $name LIKE '%$value%'";
-
-    return getArray($mysql,$sql);
+    $sort = json_decode($_REQUEST['sort']);
+    $sortProperty = $sort[0]->property;
+    $sortDirection = $sort[0]->direction;
+    $limit = $_REQUEST['limit'];
+    $start = $_REQUEST['start'];
+    $arr = array();
+    $sql = "select * from huibang_vipbaseinfo WHERE $name LIKE  '%$value%' ORDER BY $sortProperty $sortDirection LIMIT $start,$limit";
+    //echo $sql;
+    $resArr = getArray($mysql, $sql);
+    $arr['topics'] = $resArr;
+    $countSql="select count(*) from huibang_vipbaseinfo WHERE $name LIKE  '%$value%'";
+    $arr['totalCount'] = getOne($mysql,$countSql)[0];
+    return $arr;
 }
 
 function readVipBaseInfo($mysql, $arr)

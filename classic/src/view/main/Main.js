@@ -24,12 +24,72 @@ Ext.define('guanli.view.main.Main', {
     controller: 'main',
     viewModel: 'main',
 
-    ui: 'navigation',
 
     tabBarHeaderPosition: 1,
     titleRotation: 0,
     tabRotation: 0,
+    ui: 'navigation',
 
+    initComponent: function () {
+        var me = this;
+
+        me.tbar = [
+            {
+                text: "欢迎 " + My.loginInfo.username,
+                menu: [
+                    {
+                        text: "退出登录", handler: function () {
+                        My.Ajax(My.userReadUrl+"outLogin",{},function(){
+                            location.reload()
+                        })
+                    }
+                    }
+                ]
+            }
+        ],
+            me.items = [
+                {
+                    xtype: "userManager",
+                    iconCls: "fa-users",
+                    //hidden: !My.loginInfo.userManager
+                },
+                {
+                    xtype: "vipInfoTab",
+                    iconCls: "fa-user"
+                },
+
+
+                {
+                    title: 'Home',
+                    iconCls: 'fa-home',
+                    // The following grid shares a store with the classic version's grid as well!
+                    items: [{
+                        xtype: 'mainlist'
+                    }]
+                }, {
+                    title: 'Users',
+                    iconCls: 'fa-user',
+                    hidden: true,
+                    bind: {
+                        html: '{loremIpsum}'
+                    }
+                }, {
+                    title: 'Groups',
+                    iconCls: 'fa-users',
+                    hidden: true,
+                    bind: {
+                        html: '{loremIpsum}'
+                    }
+                }, {
+                    title: 'Settings',
+                    hidden: true,
+                    iconCls: 'fa-cog',
+                    bind: {
+                        html: '{loremIpsum}'
+                    }
+                }];
+        me.callParent();
+    },
     header: {
         layout: {
             align: 'stretchmax'
@@ -78,41 +138,5 @@ Ext.define('guanli.view.main.Main', {
         }
     },
 
-    items: [
-        {
-            xtype:"vipInfoTab"
-        },
-        {
-            xtype:"userManager"
-        },
 
-        {
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-            hidden:true,
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-            hidden:true,
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-            hidden:true,
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }]
 });
