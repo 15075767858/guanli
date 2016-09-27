@@ -103,7 +103,7 @@ Ext.define('guanli.view.panel.QueryVip', {
             autoLoad: true,
             proxy: {
                 type: "ajax",
-                url: "http://127.0.0.1/guanli/resources/vip_read.php?par=readVipBaseInfoByItem&name=hb_vipCardNumber&value=&_dc=1474329240807&limit=10",
+                url: "resources/vip_read.php?par=readVipBaseInfoByItem&name=hb_vipCardNumber&value=&_dc=1474329240807&limit=10",
                 reader: {
                     type: "json",
                     rootProperty: 'topics',
@@ -111,6 +111,7 @@ Ext.define('guanli.view.panel.QueryVip', {
                 }
             }
         });
+
         var grid = Ext.create("Ext.grid.Panel", {
             title: "查找结果",
             store: gridStore,
@@ -150,7 +151,8 @@ Ext.define('guanli.view.panel.QueryVip', {
                             var vipinfoPanel = Ext.getCmp('vipInfoManger')
                             var addPanel = vipinfoPanel.add({
                                 xtype: "addVipPanel",
-                                title: "修改会员信息"
+                                title: "修改会员信息",
+                                useType: "update"
                             })
                             vipinfoPanel.setActiveTab(addPanel)
                             addPanel.readVipInfo(record.data);
@@ -159,12 +161,17 @@ Ext.define('guanli.view.panel.QueryVip', {
                 },
 
                 {
-                    text: "删除", xtype: "widgetcolumn",
+                    text: "删除",
+                    xtype: "widgetcolumn",
                     widget: {
                         xtype: "button",
                         text: "删除",
                         handler: function () {
                             var record = this.$widgetRecord;
+                            if(!parseInt(My.loginInfo['deleteVipBaseInfo'])){
+                                Ext.Msg.alert("消息","没有权限。")
+                                return ;
+                            }
                             Ext.Msg.confirm("删除会员", "是否要删除会员" + record.data.hb_vipName, function (isDel) {
                                 console.log(arguments)
                                 if (isDel == "no") {

@@ -15,7 +15,7 @@ mysqli_close($mysql);
 function deleteUser($mysql, $arr)
 {
     $id = $arr['id'];
-    mysqli_query($mysql, "DELETE FROM `hb_user` WHERE `id` ='$id' ");
+    mysqli_query($mysql, "DELETE FROM `huibang_user` WHERE `id` ='$id' ");
 
 
 }

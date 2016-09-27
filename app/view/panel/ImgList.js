@@ -22,11 +22,11 @@ Ext.define('guanli.view.panel.ImgList', {
                 for (var i = 0; i < images.length; i++) {
                     srcStr += images[i].src + ","
                 }
-                return srcStr.substr(0, srcStr.length - 1)||""
+                return srcStr.substr(0, srcStr.length - 1) || ""
             }
         me.setValue = function (value) {
-            if(!value){
-                return ;
+            if (!value) {
+                return;
             }
             var arr = value.split(",");
             for (var i = 0; i < arr.length; i++) {
@@ -39,10 +39,10 @@ Ext.define('guanli.view.panel.ImgList', {
                 xtype: "button",
                 text: "上传图片", handler: function () {
                 var uploadWindow = Ext.create("guanli.view.upload.UploadWindow", {
-                    url: "resources/img_upload.php",
+                    url: "resources/img_upload.php?par=upload",
                     fieuploaded: function (upload, file, response) {
                         console.log(arguments)
-                        var img = me.createImg("resources/"+response.response)
+                        var img = me.createImg("resources/" + response.response)
                         me.insert(1, img);
 
                     },
@@ -83,6 +83,12 @@ Ext.define('guanli.view.panel.ImgList', {
                                     {
                                         text: "删除图片",
                                         handler: function () {
+                                            console.log(img)
+
+                                            /*var filename = img.src.substr(img.src.indexOf("/") + 1, img.src.length)
+                                            My.Ajax("resources/img_upload.php?par=delete", {filename: filename}, function () {
+                                            })*/
+
                                             me.remove(img);
                                             win.close();
                                         }

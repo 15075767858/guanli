@@ -12,10 +12,10 @@ Ext.define('guanli.view.window.LoginWindow', {
         type: 'window-loginwindow'
     },
     title: "用户登录",
-    modal: true,
+    //modal: true,
     frame: true,
     closable: false,
-    width: 325,
+    width: 400,
     autoShow: true,
 
     items: {
@@ -100,7 +100,8 @@ Ext.define('guanli.view.window.LoginWindow', {
         Ext.create("guanli.view.main.Main", {
             renderTo: Ext.getBody()
         })
-        Ext.Msg.alert("消息", "登录成功,欢迎" + data.username);
+
+        //Ext.Msg.alert("消息", "登录成功,欢迎" + data.username);
 
         setTimeout(function () {
             me.close();
@@ -109,6 +110,7 @@ Ext.define('guanli.view.window.LoginWindow', {
     },
     listeners: {
         boxready: function () {
+
             var me = this;
             My.Ajax(My.loginUrl, {}, function (response) {
                 console.log(response);
@@ -117,6 +119,7 @@ Ext.define('guanli.view.window.LoginWindow', {
                     me.loginSuccess(resJson);
                 }
             })
+
         }
 
     }

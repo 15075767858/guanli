@@ -25,10 +25,6 @@ Ext.define('guanli.view.main.Main', {
     viewModel: 'main',
 
 
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-    ui: 'navigation',
 
     initComponent: function () {
         var me = this;
@@ -39,58 +35,83 @@ Ext.define('guanli.view.main.Main', {
                 menu: [
                     {
                         text: "退出登录", handler: function () {
-                        My.Ajax(My.userReadUrl+"outLogin",{},function(){
+                        My.Ajax(My.userReadUrl + "outLogin", {}, function () {
                             location.reload()
                         })
                     }
                     }
                 ]
             }
-        ],
-            me.items = [
-                {
-                    xtype: "userManager",
-                    iconCls: "fa-users",
-                    //hidden: !My.loginInfo.userManager
-                },
-                {
-                    xtype: "vipInfoTab",
-                    iconCls: "fa-user"
-                },
+        ]
+
+        me.items = [
 
 
-                {
-                    title: 'Home',
-                    iconCls: 'fa-home',
-                    // The following grid shares a store with the classic version's grid as well!
-                    items: [{
-                        xtype: 'mainlist'
-                    }]
-                }, {
-                    title: 'Users',
-                    iconCls: 'fa-user',
-                    hidden: true,
-                    bind: {
-                        html: '{loremIpsum}'
+            {
+                title: 'Home',
+                iconCls: 'fa-home',
+                // The following grid shares a store with the classic version's grid as well!
+                html:"惠邦资讯管理系统",
+
+                height:Ext.getBody().height,
+                width:"100%"
+
+            },
+            {
+                xtype: "userManager",
+                iconCls: "fa-users",
+                hidden:!parseInt(My.loginInfo['user_Manager']),
+                /*listeners: {
+                    boxready: function (userPanel) {
+                        return ;
+                        var userManager = My.loginInfo['user_Manager']
+                        console.log(userManager)
+                        if(userManager){
+                            userPanel.hide()
+                        }else{
+                            userPanel.show()
+                        }
                     }
-                }, {
-                    title: 'Groups',
-                    iconCls: 'fa-users',
-                    hidden: true,
-                    bind: {
-                        html: '{loremIpsum}'
-                    }
-                }, {
-                    title: 'Settings',
-                    hidden: true,
-                    iconCls: 'fa-cog',
-                    bind: {
-                        html: '{loremIpsum}'
-                    }
-                }];
+                }*/
+            },
+            {
+                xtype: "vipInfoTab",
+                iconCls: "fa-user"
+            },
+
+
+             {
+                title: 'Users',
+                iconCls: 'fa-user',
+                hidden: true,
+                bind: {
+                    html: '{loremIpsum}'
+                }
+            }, {
+                title: 'Groups',
+                iconCls: 'fa-users',
+                hidden: true,
+                bind: {
+                    html: '{loremIpsum}'
+                }
+            }, {
+                title: 'Settings',
+                hidden: true,
+                iconCls: 'fa-cog',
+                bind: {
+                    html: '{loremIpsum}'
+                }
+            }];
         me.callParent();
     },
-    header: {
+
+    /*
+     tabBarHeaderPosition: 1,
+     titleRotation: 0,
+     tabRotation: 0,
+     ui: 'navigation',
+
+     header: {
         layout: {
             align: 'stretchmax'
         },
@@ -136,7 +157,7 @@ Ext.define('guanli.view.main.Main', {
                 }
             }
         }
-    },
+    },*/
 
 
 });

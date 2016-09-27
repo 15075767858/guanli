@@ -27,6 +27,7 @@ Ext.define('guanli.view.user.UserFormPanel', {
         var me = this;
         me.loadRecord(data);
     },
+
     initComponent: function () {
         var me = this;
 
@@ -41,10 +42,13 @@ Ext.define('guanli.view.user.UserFormPanel', {
                             method: 'get',
                             url: My.userAddUrl + "addUser",
                             success: function (form, action) {
-                                Ext.Msg.alert('消息', "修改完成。");
+                                console.log(arguments)
+                                Ext.Msg.alert('消息', "增加会员成功。"+action.result.res);
+
                             },
                             failure: function (form, action) {
-                                Ext.Msg.alert('消息', "修改完成。");
+                                console.log(arguments)
+                                Ext.Msg.alert('消息', "增加失败。"+action.response.responseText);
                             }
                         });
                     }
@@ -111,6 +115,9 @@ Ext.define('guanli.view.user.UserFormPanel', {
                 }, {
                     xtype: "checkbox",
                     boxLabel: "管理员身份",
+                    name: "user_Manager",
+                    inputValue: 1,
+                    uncheckedValue: 0,
                     flex: 1
                 }
             ]
@@ -118,7 +125,6 @@ Ext.define('guanli.view.user.UserFormPanel', {
         {
             xtype: "fieldset",
             title: "权限信息",
-            name: "user_Manager",
             layout: "auto",
             defaultType: 'checkboxgroup',
             defaults: {
@@ -134,65 +140,71 @@ Ext.define('guanli.view.user.UserFormPanel', {
                 {
                     fieldLabel: '会员基本信息管理',
                     items: [
-                        {name: "vip_baseinfo_create", boxLabel: '增加',},
-                        {name: "vip_baseinfo_read", boxLabel: '查看', checked: true},
-                        {name: "vip_baseinfo_update", boxLabel: '更新',},
-                        {name: "vip_baseinfo_delete", boxLabel: '删除',}
+                        {name: "addVipBaseInfo", boxLabel: '增加',checked:true},
+                        {name: "readVipBaseInfo", boxLabel: '查看',checked:true },
+                        {name: "updateVipBaseInfo", boxLabel: '更新',checked:true},
+                        {name: "vip_baseinfo_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
                 {
                     fieldLabel: '会员体检报告管理',
                     items: [
-                        {name: "vip_TiJianBaoGao_create", boxLabel: '增加',},
-                        {name: "vip_TiJianBaoGao_read", boxLabel: '查看', checked: true},
-                        {name: "vip_TiJianBaoGao_update", boxLabel: '更新',},
-                        {name: "vip_TiJianBaoGao_delete", boxLabel: '删除',}
+                        {name: "addVipTiJianBaoGao", boxLabel: '增加',checked:true},
+                        {name: "readVipTiJianBaoGao", boxLabel: '查看',checked:true },
+                        {name: "updateVipTiJianBaoGao", boxLabel: '更新',checked:true},
+                        {name: "vip_TiJianBaoGao_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
                 {
                     fieldLabel: '会员缴费记录管理',
                     items: [
-                        {name: "vip_JiaoFeiJiLu_create", boxLabel: '增加',},
-                        {name: "vip_JiaoFeiJiLu_read", boxLabel: '查看', checked: true},
-                        {name: "vip_JiaoFeiJiLu_update", boxLabel: '更新',},
-                        {name: "vip_JiaoFeiJiLu_delete", boxLabel: '删除',}
+                        {name: "addVipJiaoFeiJiLu", boxLabel: '增加',checked:true},
+                        {name: "readVipJiaoFeiJiLu", boxLabel: '查看',checked:true },
+                        {name: "updateVipJiaoFeiJiLu", boxLabel: '更新',checked:true},
+                        {name: "vip_JiaoFeiJiLu_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
 
                 {
                     fieldLabel: '赠送保险纪录管理',
                     items: [
-                        {name: "vip_ZengSongBaoXian_create", boxLabel: '增加',},
-                        {name: "vip_ZengSongBaoXian_read", boxLabel: '查看', checked: true},
-                        {name: "vip_ZengSongBaoXian_update", boxLabel: '更新',},
-                        {name: "vip_ZengSongBaoXian_delete", boxLabel: '删除',}
+                        {name: "addVipZengSongBaoXian", boxLabel: '增加',checked:true},
+                        {name: "readVipZengSongBaoXian", boxLabel: '查看',checked:true },
+                        {name: "updateVipZengSongBaoXian", boxLabel: '更新',checked:true},
+                        {name: "vip_ZengSongBaoXian_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
                 {
                     fieldLabel: '会员住院纪录管理',
                     items: [
-                        {name: "vip_ZhuYuanJiLu_create", boxLabel: '增加',},
-                        {name: "vip_ZhuYuanJiLu_read", boxLabel: '查看', checked: true},
-                        {name: "vip_ZhuYuanJiLu_update", boxLabel: '更新',},
-                        {name: "vip_ZhuYuanJiLu_delete", boxLabel: '删除',}
+                        {name: "addVipZhuYuanJiLu", boxLabel: '增加',checked:true},
+                        {name: "readVipZhuYuanJiLu", boxLabel: '查看',checked:true },
+                        {name: "updateVipZhuYuanJiLu", boxLabel: '更新',checked:true},
+                        {name: "vip_ZhuYuanJiLu_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
                 {
                     fieldLabel: '会员报销纪录管理',
                     items: [
-                        {name: "vip_BaoXiaoJiLu_create", boxLabel: '增加',},
-                        {name: "vip_BaoXiaoJiLu_read", boxLabel: '查看', checked: true},
-                        {name: "vip_BaoXiaoJiLu_update", boxLabel: '更新',},
-                        {name: "vip_BaoXiaoJiLu_delete", boxLabel: '删除',}
+                        {name: "addVipBaoXiaoJiLu", boxLabel: '增加',checked:true},
+                        {name: "readVipBaoXiaoJiLu", boxLabel: '查看',checked:true },
+                        {name: "updateVipBaoXiaoJiLu", boxLabel: '更新',checked:true},
+                        {name: "vip_BaoXiaoJiLu_delete", boxLabel: '删除',hidden:true}
                     ]
                 },
                 {
                     fieldLabel: '其他事项管理',
                     items: [
-                        {name: "vip_QiTaShiXiang_create", boxLabel: '增加',},
-                        {name: "vip_QiTaShiXiang_read", boxLabel: '查看', checked: true},
-                        {name: "vip_QiTaShiXiang_update", boxLabel: '更新',},
-                        {name: "vip_QiTaShiXiang_delete", boxLabel: '删除',}
+                        {name: "addVipQiTaShiXiang", boxLabel: '增加',checked:true},
+                        {name: "readVipQiTaShiXiang", boxLabel: '查看',checked:true },
+                        {name: "updateVipQiTaShiXiang", boxLabel: '更新',checked:true},
+                        {name: "vip_QiTaShiXiang_delete", boxLabel: '删除',hidden:true}
+                    ]
+                },
+                {
+                    fieldLabel:"删除信息",
+                    items:[
+                        {name:"deleteVipBaseInfo",boxLabel:"删除信息"}
                     ]
                 }
             ]

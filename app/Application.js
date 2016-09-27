@@ -21,6 +21,7 @@ Ext.define('guanli.Application', {
 
                 Ext.create("guanli.view.window.LoginWindow")
 
+        Ext.getBody().setStyle("backgroundImage","url('resources/images/timg-1.png')")
 
         // TODO - Launch the application
 

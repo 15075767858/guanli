@@ -1,3 +1,4 @@
+/*
 Ext.define('guanli.model.User', {
     extend: 'Ext.data.Model',
     xtype: "User",
@@ -37,3 +38,47 @@ Ext.define('guanli.model.User', {
     ]
 });
 
+*/
+
+
+Ext.define('guanli.model.User', {
+    extend: 'Ext.data.Model',
+    xtype: "User",
+    fields: [
+        {name: "id", type: "number"},
+        {name: "username", type: "string"},
+        {name: "password", type: "string"},
+        {name: "user_Manager", type: "number"},
+        {name: "addVipBaseInfo", type: "number"},
+        {name: "addVipTiJianBaoGao", type: "number"},
+        {name: "addVipJiaoFeiJiLu", type: "number"},
+        {name: "addVipZengSongBaoXian", type: "number"},
+        {name: "addVipZhuYuanJiLu", type: "number"},
+        {name: "addVipBaoXiaoJiLu", type: "number"},
+        {name: "addVipQiTaShiXiang", type: "number"},
+        {name: "deleteVipBaseInfo", type: "number"},
+        {name: "updateVipBaseInfo", type: "number"},
+        {name: "updateVipTiJianBaoGao", type: "number"},
+        {name: "updateVipJiaoFeiJiLu", type: "number"},
+        {name: "updateVipZengSongBaoXian", type: "number"},
+        {name: "updateVipZhuYuanJiLu", type: "number"},
+        {name: "updateVipBaoXiaoJiLu", type: "number"},
+        {name: "updateVipQiTaShiXiang", type: "number"},
+        {name: "readVipBaseInfoByItem", type: "number"},
+        {name: "readVipBaseInfo", type: "number"},
+        {name: "readVipTiJianBaoGao", type: "number"},
+        {name: "readVipJiaoFeiJiLu", type: "number"},
+        {name: "readVipZengSongBaoXian", type: "number"},
+        {name: "readVipZhuYuanJiLu", type: "number"},
+        {name: "readVipBaoXiaoJiLu", type: "number"},
+        {name: "readVipQiTaShiXiang", type: "number"},
+        {name: "CreateDate", type: "number"}
+    ]
+});
+
+/*
+for (var i = 0; i < a.store.data.items.length; i++) {
+    console.log(a.store.data.items[i].data.columnName)
+}
+
+*/
