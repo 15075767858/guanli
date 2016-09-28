@@ -10,7 +10,7 @@ Ext.define('guanli.view.panel.QueryVip', {
     viewModel: {
         type: 'panel-queryvip'
     },
-
+    title:"会员查找",
     width: "100%",
     height: "100%",
     scrollable: "y",

@@ -5,7 +5,7 @@ Ext.define('guanli.view.user.QueryUser', {
         'guanli.view.user.QueryUserController',
         'guanli.view.user.QueryUserModel'
     ],
-
+    title:"查找用户",
     controller: 'user-queryuser',
     viewModel: {
         type: 'user-queryuser'
@@ -119,13 +119,15 @@ Ext.define('guanli.view.user.QueryUser', {
                         handler: function (button) {
                             var record = this.$widgetRecord;
                             console.log(record)
-                            var UserManagerPanel = Ext.getCmp('UserManager')
-                            var userFormPanel = UserManagerPanel.add({
+
+                            var userFormPanel =  My.mainTab.add({
                                 xtype: "UserFormPanel",
                                 title: "修改用户信息",
                                 useType: "update"
                             })
-                            UserManagerPanel.setActiveTab(userFormPanel)
+
+
+                            My.mainTab.setActiveTab(userFormPanel)
                             userFormPanel.readUser(record);
                         }
                     }

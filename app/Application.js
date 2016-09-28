@@ -19,9 +19,9 @@ Ext.define('guanli.Application', {
 
 
 
-                Ext.create("guanli.view.window.LoginWindow")
+        Ext.create("guanli.view.window.LoginWindow")
 
-        Ext.getBody().setStyle("backgroundImage","url('resources/images/timg-1.png')")
+        Ext.getBody().setStyle("backgroundImage", "url('resources/images/timg-1.png')")
 
         // TODO - Launch the application
 
@@ -31,9 +31,9 @@ Ext.define('guanli.Application', {
         //Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
         //    function (choice) {
         //        if (choice === 'yes') {
-                    window.location.reload();
-                //}
-            //}
+        window.location.reload();
+        //}
+        //}
         //);
     }
 });
@@ -51,6 +51,7 @@ My.userUpdateUrl = "resources/user_update.php?par=";
 My.loginUrl = "resources/user_read.php?par=login"
 My.loginInfo = null;
 My.isDebug = true;
+My.mainTab=null;
 My.Ajax = function (url, params, success) {
     Ext.Ajax.request({
         url: url,

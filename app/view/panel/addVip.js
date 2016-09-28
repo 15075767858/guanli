@@ -6,6 +6,7 @@ Ext.define('guanli.view.panel.addVip', {
         'guanli.view.panel.addVipModel'
     ],
 
+    title:"会员增加",
     scrollable: true,
     controller: 'panel-addvip',
     /*viewModel: {

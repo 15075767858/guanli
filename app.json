@@ -555,15 +555,16 @@
 
             "toolkit": "classic",
             
-            "theme": "theme-triton",
+            //"theme": "theme-triton",
             //"theme": "touch-sizing",//不能用
             //"theme": "theme-neutral",//不能用
             //"theme": "theme-neptune",//蓝色
             //"theme": "theme-gray",//白色古老
             //"theme": "theme-crisp",//白色
             //"theme": "theme-aria",//黑色
-            //"theme": "theme-classic",//古老
+            "theme": "theme-classic",//古老
             //"theme": "theme-base",//不能用
+
             "sass": {
                 // "save": "classic/sass/save.scss"
             },

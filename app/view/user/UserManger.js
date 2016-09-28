@@ -1,6 +1,8 @@
 Ext.define('guanli.view.user.UserManger', {
     extend: 'Ext.tab.Panel',
     xtype: "userManager",
+    iconCls: "fa-users useFontAwesome",
+
     requires: [
         'guanli.view.user.UserMangerController',
         'guanli.view.user.UserMangerModel',

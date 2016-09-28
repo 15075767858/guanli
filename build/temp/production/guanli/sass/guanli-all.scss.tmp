@@ -551,6 +551,8 @@ $include-guanli-view-main-list: dynamic(true);;
 $include-guanli-view-main-main: dynamic(true);;
 $include-guanli-view-main-maincontroller: dynamic(true);;
 $include-guanli-view-main-mainmodel: dynamic(true);;
+$include-guanli-view-main-maintreecontroller: dynamic(false);;
+$include-guanli-view-main-maintreemodel: dynamic(false);;
 $include-guanli-view-panel-baoxianxinxi: dynamic(false);;
 $include-guanli-view-panel-baoxianxinxicontroller: dynamic(false);;
 $include-guanli-view-panel-baoxianxinximodel: dynamic(false);;

@@ -1,6 +1,8 @@
 Ext.define('guanli.view.tab.VipInfo', {
     extend: 'Ext.tab.Panel',
     xtype: "vipInfoTab",
+    iconCls: "fa-user useFontAwesome",
+
     requires: [
         'guanli.view.tab.VipInfoController',
         'guanli.view.tab.VipInfoModel',
