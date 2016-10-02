@@ -89,7 +89,7 @@ Ext.define('guanli.view.user.QueryUser', {
             autoLoad: true,
             proxy: {
                 type: "ajax",
-                url: "resources/user_read.php?par=readUserByItem&name=username&value=&_dc=1474329240807&limit=10",
+                url: My.userReadUrl+"readUserByItem&name=username&value=&_dc=1474329240807&limit=10",
                 reader: {
                     type: "json",
                     rootProperty: 'topics',

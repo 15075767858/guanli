@@ -39,16 +39,16 @@ Ext.define('guanli.Application', {
 });
 
 My = {};
-My.mainUrl = 'resources/main.php?par=';
-My.vipAddUrl = "resources/vip_create.php?par=";
-My.vipReadUrl = "resources/vip_read.php?par=";
-My.vipUpdateUrl = "resources/vip_update.php?par=";
-My.vipDeleteUrl = "resources/vip_delete.php?par=";
-My.userAddUrl = "resources/user_create.php?par=";
-My.userDeleteUrl = "resources/user_delete.php?par=";
-My.userReadUrl = "resources/user_read.php?par=";
-My.userUpdateUrl = "resources/user_update.php?par=";
-My.loginUrl = "resources/user_read.php?par=login"
+My.mainUrl = 'resources/main.php?';
+My.vipAddUrl = My.mainUrl+"cls=vip_create.php&par=";
+My.vipReadUrl = My.mainUrl+"cls=vip_read.php&par=";
+My.vipUpdateUrl = My.mainUrl+"cls=vip_update.php&par=";
+My.vipDeleteUrl = My.mainUrl+"cls=vip_delete.php&par=";
+My.userAddUrl = My.mainUrl+"cls=user_create.php&par=";
+My.userDeleteUrl = My.mainUrl+"cls=user_delete.php&par=";
+My.userReadUrl = My.mainUrl+"cls=user_read.php&par=";
+My.userUpdateUrl = My.mainUrl+"cls=user_update.php&par=";
+My.loginUrl = "resources/login.php?par="
 My.loginInfo = null;
 My.isDebug = true;
 My.mainTab=null;

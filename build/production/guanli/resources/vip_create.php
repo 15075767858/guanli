@@ -6,9 +6,11 @@
  * Time: 下午7:11
  */
 
+
+/*
 require_once('mysql_link.php');
-mysqli_query($mysql, "set names utf8");
-//mysqli_set_charset($mysql,'utf-8');
+require_once('mysql_utils.php');
+
 
 $par = $_REQUEST['par'];
 $resArr = array();
@@ -29,13 +31,8 @@ if ($par) {
 echo json_encode($resArr);
 mysqli_close($mysql);
 
-exit;
+exit;*/
 
-function execAddSql($mysql,$sql){
-    mysqli_query($mysql, $sql);
-    $uid = mysqli_insert_id($mysql);
-    return $uid;
-}
 
 function addVipBaseInfo($mysql, $arr)
 {
@@ -85,7 +82,6 @@ function addVipJiaoFeiJiLu($mysql, $arr)
     $hb_JiaoFeiJinE = $arr['hb_JiaoFeiJinE'];
     $hb_BeiZhu = $arr['hb_BeiZhu'];
     $hb_vipId = $arr['hb_vipId'];
-
     $sql = "insert `bdm246823269_db`.`huibang_vipJiaoFeiJiLu`(`hb_Date`,`hb_JiaoFeiJinE`,`hb_BeiZhu`,`hb_vipId`) values('$hb_Date','$hb_JiaoFeiJinE','$hb_BeiZhu','$hb_vipId');";
     return  execAddSql($mysql,$sql);
 

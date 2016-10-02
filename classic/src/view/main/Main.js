@@ -69,7 +69,7 @@ Ext.define('guanli.view.main.Main', {
                         //text: "欢迎 " + My.loginInfo.username,
                         text: "退出登录",
                         handler: function () {
-                            My.Ajax(My.userReadUrl + "outLogin", {}, function () {
+                            My.Ajax(My.loginUrl + "outLogin", {}, function () {
                                 location.reload()
                             })
                         }
@@ -89,6 +89,7 @@ Ext.define('guanli.view.main.Main', {
                 },
                 items: [
                     {
+                        hidden:true,
                         closable: false,
                         title: 'Home',
                         //iconCls: 'fa-home',
@@ -103,7 +104,13 @@ Ext.define('guanli.view.main.Main', {
                         //hidden: !parseInt(My.loginInfo['user_Manager'])
                     },
                     {
-                        hidden: true,
+                        hidden: false,
+                        xtype: "addVipPanel",
+
+                        //hidden: !parseInt(My.loginInfo['user_Manager'])
+                    },
+                    {
+                        hidden: false,
                         xtype: "vipInfoTab",
                     },
 

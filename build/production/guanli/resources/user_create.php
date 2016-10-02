@@ -10,7 +10,6 @@ if ($par) {
         $resArr['success'] = true;
         $resArr['res']=$res;
     }
-
 }
 
 echo json_encode($resArr);

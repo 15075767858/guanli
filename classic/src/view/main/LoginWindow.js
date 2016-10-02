@@ -21,7 +21,6 @@ Ext.define('guanli.view.window.LoginWindow', {
     items: {
         xtype: "form",
         bodyPadding: 10,
-        url: "resources/main.php?par=login",
         method: "POST",
 
         items: [
@@ -54,7 +53,7 @@ Ext.define('guanli.view.window.LoginWindow', {
             var form = this;
 
             form.submit({
-                url: My.userReadUrl + "login",
+                url: My.loginUrl + "login",
                 success: function (form, action) {
                     console.log(action)
                     if (action.result) {
@@ -101,7 +100,6 @@ Ext.define('guanli.view.window.LoginWindow', {
             renderTo: Ext.getBody()
         })
 
-        //Ext.Msg.alert("消息", "登录成功,欢迎" + data.username);
 
         setTimeout(function () {
             me.close();
@@ -112,8 +110,15 @@ Ext.define('guanli.view.window.LoginWindow', {
         boxready: function () {
 
             var me = this;
-            My.Ajax(My.loginUrl, {}, function (response) {
-                console.log(response);
+            My.Ajax(My.loginUrl+'login', {}, function (response) {
+
+               /* try{
+                    Ext.decode(response.responseText);
+                }catch (e){
+                    Ext.Msg.alert("消息","服务器异常 "+e)
+                    return ;
+                }*/
+
                 if (response.responseText) {
                     var resJson = Ext.decode(response.responseText)
                     me.loginSuccess(resJson);

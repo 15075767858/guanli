@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-#cd /Library/WebServer/Documents/graph/build/production
+cd /Library/WebServer/Documents/guanli/build/production
 ftp  -n<<!
 open bxu2341910074.my3w.com
 user bxu2341910074 abcd123456
 binary
+cd htdocs
 ls
-#cd web_arm/www/
-#ls
-#put graph.tar.bz2
-#close
-#bye
+put guanli.zip
+close
+bye

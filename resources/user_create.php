@@ -10,7 +10,6 @@ if ($par) {
         $resArr['success'] = true;
         $resArr['res']=$res;
     }
-
 }
 
 echo json_encode($resArr);
@@ -88,9 +87,9 @@ function addUser($mysql, $arr)
     return execAddSql($mysql, $sql);
 }
 
-function execAddSql($mysql, $sql)
+/*function execAddSql($mysql, $sql)
 {
     mysqli_query($mysql, $sql);
     $uid = mysqli_insert_id($mysql);
     return $uid;
-}
+}*/

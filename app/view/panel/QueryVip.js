@@ -10,7 +10,7 @@ Ext.define('guanli.view.panel.QueryVip', {
     viewModel: {
         type: 'panel-queryvip'
     },
-    title:"会员查找",
+    title: "会员查找",
     width: "100%",
     height: "100%",
     scrollable: "y",
@@ -103,7 +103,7 @@ Ext.define('guanli.view.panel.QueryVip', {
             autoLoad: true,
             proxy: {
                 type: "ajax",
-                url: "resources/vip_read.php?par=readVipBaseInfoByItem&name=hb_vipCardNumber&value=&_dc=1474329240807&limit=10",
+                url: My.vipReadUrl + "readVipBaseInfoByItem&name=hb_vipCardNumber&value=&_dc=1474329240807&limit=10",
                 reader: {
                     type: "json",
                     rootProperty: 'topics',
@@ -148,13 +148,15 @@ Ext.define('guanli.view.panel.QueryVip', {
                         handler: function (button) {
                             var record = this.$widgetRecord;
                             console.log(record)
-                            var vipinfoPanel = Ext.getCmp('vipInfoManger')
-                            var addPanel = vipinfoPanel.add({
+                            var addPanel = My.mainTab.add({
                                 xtype: "addVipPanel",
                                 title: "修改会员信息",
-                                useType: "update"
+                                useType: "update",
+                                vipId:record.id
                             })
-                            vipinfoPanel.setActiveTab(addPanel)
+
+                            My.mainTab.setActiveTab(addPanel);
+
                             addPanel.readVipInfo(record.data);
                         }
                     }
@@ -168,9 +170,9 @@ Ext.define('guanli.view.panel.QueryVip', {
                         text: "删除",
                         handler: function () {
                             var record = this.$widgetRecord;
-                            if(!parseInt(My.loginInfo['deleteVipBaseInfo'])){
-                                Ext.Msg.alert("消息","没有权限。")
-                                return ;
+                            if (!parseInt(My.loginInfo['deleteVipBaseInfo'])) {
+                                Ext.Msg.alert("消息", "没有权限。")
+                                return;
                             }
                             Ext.Msg.confirm("删除会员", "是否要删除会员" + record.data.hb_vipName, function (isDel) {
                                 console.log(arguments)
@@ -179,7 +181,17 @@ Ext.define('guanli.view.panel.QueryVip', {
                                 }
                                 My.AjaxPost(My.vipDeleteUrl + "deleteVipBaseInfo", {id: record.id}, function (response) {
                                     grid.store.reload();
-                                    Ext.Msg.alert("消息", "删除操作完成" + response.responseText)
+
+                                    try{
+                                        var ojson = Ext.decode(response.responseText);
+                                        if(ojson.success){
+                                            Ext.Msg.alert("消息", "删除操作完成,有"+ojson.info+"条纪录被改变。")
+                                        }
+                                    }catch (e){
+                                        Ext.Msg.alert("消息", "服务器异常 "+ response.responseText)
+                                    }
+
+
                                 })
                             })
                         }

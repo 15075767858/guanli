@@ -1,36 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: liuzhencai
- * Date: 16/9/11
- * Time: 下午7:11
- */
 
-require_once('mysql_link.php');
 
-mysqli_query($mysql, "set names utf8");
+//require_once('mysql_link.php');
+//require_once('mysql_utils.php');
 
-$par = $_REQUEST['par'];
+
+/*$par = $_REQUEST['par'];
 
 $resArr = array();
 
 if ($par) {
 
+    require_once('filter_permissions.php');
+
     $vipId = call_user_func($par, $mysql, $_REQUEST);
-
     json_encode($vipId);
-
 }
 //echo json_encode($resArr);
 mysqli_close($mysql);
-exit;
+exit;*/
 
-function execUpdateSql($mysql, $sql)
-{
-
-
-    return mysqli_query($mysql, $sql);
-}
 
 function updateVipBaseInfo($mysql, $arr)
 {
@@ -58,6 +47,7 @@ function updateVipBaseInfo($mysql, $arr)
 
 function updateVipTiJianBaoGao($mysql, $arr)
 {
+
     $hb_ManXingBing = $arr['hb_ManXingBing'];
     $hb_ManXingBingTuPian = $arr['hb_ManXingBingTuPian'];
     $hb_ZhongDaJiBing = $arr['hb_ZhongDaJiBing'];
@@ -69,7 +59,6 @@ function updateVipTiJianBaoGao($mysql, $arr)
     $hb_QiTa = $arr['hb_QiTa'];
     $hb_vipId = $arr['hb_vipId'];
     $id = $arr['id'];
-
 
     $sql = "Update `bdm246823269_db`.`huibang_vipTiJianBaoGao` SET `hb_ManXingBing` = '$hb_ManXingBing',`hb_ManXingBingTuPian` = '$hb_ManXingBingTuPian',`hb_ZhongDaJiBing` = '$hb_ZhongDaJiBing',`hb_ZhongDaJiBingTuPian` = '$hb_ZhongDaJiBingTuPian',`hb_YiChuanJiBing` = '$hb_YiChuanJiBing',`hb_YiChuanJiBingTuPian` = '$hb_YiChuanJiBingTuPian',`hb_TiJianQingKuang` = '$hb_TiJianQingKuang',`hb_TiJianQingKuangTuPian` = '$hb_TiJianQingKuangTuPian',`hb_QiTa` = '$hb_QiTa' WHERE id = '$id' ";
 
@@ -84,11 +73,14 @@ function updateVipJiaoFeiJiLu($mysql, $arr)
     $hb_BeiZhu = $arr['hb_BeiZhu'];
     $id = $arr['id'];
     $hb_vipId = $arr['hb_vipId'];
-
-    //$sql = "insert `bdm246823269_db`.`huibang_vipJiaoFeiJiLu`(`hb_Date`,`hb_JiaoFeiJinE`,`hb_BeiZhu`,`hb_vipId`) values('$hb_Date','$hb_JiaoFeiJinE','$hb_BeiZhu','$hb_vipId');";
-
-    $sql = "Update `bdm246823269_db`.`huibang_vipJiaoFeiJiLu` SET `hb_Date`='$hb_Date',`hb_JiaoFeiJinE`='$hb_JiaoFeiJinE',`hb_BeiZhu `='$hb_BeiZhu' WHERE id='$id'";
-    return execUpdateSql($mysql, $sql);
+    $countSql = "select count(*) from `huibang_vipJiaoFeiJiLu` WHERE id = '$id'";
+    if (getOne($mysql, $countSql)[0]) {
+        $sql = "Update `bdm246823269_db`.`huibang_vipJiaoFeiJiLu` SET `hb_Date`='$hb_Date',`hb_JiaoFeiJinE`='$hb_JiaoFeiJinE',`hb_BeiZhu`='$hb_BeiZhu' WHERE id='$id'";
+        return execUpdateSql($mysql, $sql);
+    } else {
+        require_once("vip_create.php");
+        return addVipJiaoFeiJiLu($mysql, $arr);
+    }
 
 }
 
@@ -120,12 +112,18 @@ function updateVipZhuYuanJiLu($mysql, $arr)
     $id = $arr['id'];
     $hb_vipId = $arr['hb_vipId'];
 
-    $sql = "Update `bdm246823269_db`.`huibang_vipZhuYuanJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_ZhenDuanZhengMing`='$hb_ZhenDuanZhengMing',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng' WHERE id='$id' ";
+    //$sql = "Update `bdm246823269_db`.`huibang_vipZhuYuanJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_ZhenDuanZhengMing`='$hb_ZhenDuanZhengMing',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng' WHERE id='$id' ";
 
     //$sql = "insert `bdm246823269_db`.`huibang_vipZhuYuanJiLu`(`hb_RuYuanDate`,`hb_ChuYuanDate`,`hb_ZhenDuanZhengMing`,`hb_YiYuanMingCheng`,`hb_vipId`) values('$hb_RuYuanDate','$hb_ChuYuanDate','$hb_ZhenDuanZhengMing','$hb_YiYuanMingCheng','$hb_vipId');";
-    return execUpdateSql($mysql, $sql);
-
-
+    //return execUpdateSql($mysql, $sql);
+    $countSql = "select count(*) from `huibang_vipZhuYuanJiLu` WHERE id = '$id'";
+    if (getOne($mysql, $countSql)[0]) {
+        $sql = "Update `bdm246823269_db`.`huibang_vipZhuYuanJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_ZhenDuanZhengMing`='$hb_ZhenDuanZhengMing',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng' WHERE id='$id' ";
+        return execUpdateSql($mysql, $sql);
+    } else {
+        require_once("vip_create.php");
+        return addVipZhuYuanJiLu($mysql, $arr);
+    }
 }
 
 
@@ -138,12 +136,17 @@ function updateVipBaoXiaoJiLu($mysql, $arr)
     $hb_BeiZhu = $arr['hb_BeiZhu'];
     $id = $arr['id'];
     $hb_vipId = $arr['hb_vipId'];
-
-    $sql = "Update `bdm246823269_db`.`huibang_vipBaoXiaoJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_HuanZheMingCheng`='$hb_HuanZheMingCheng',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng',`hb_BeiZhu`='$hb_BeiZhu' WHERE id= '$id' ";
-//    $sql = "insert `bdm246823269_db`.`huibang_vipBaoXiaoJiLu`(`hb_RuYuanDate`,`hb_ChuYuanDate`,`hb_HuanZheMingCheng`,`hb_YiYuanMingCheng`,`hb_BeiZhu`,`hb_vipId`) values('$hb_RuYuanDate','$hb_ChuYuanDate','$hb_HuanZheMingCheng','$hb_YiYuanMingCheng','$hb_BeiZhu','$hb_vipId');";
-
-    return execUpdateSql($mysql, $sql);
-
+    //$sql = "Update `bdm246823269_db`.`huibang_vipBaoXiaoJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_HuanZheMingCheng`='$hb_HuanZheMingCheng',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng',`hb_BeiZhu`='$hb_BeiZhu' WHERE id= '$id' ";
+    //$sql = "insert `bdm246823269_db`.`huibang_vipBaoXiaoJiLu`(`hb_RuYuanDate`,`hb_ChuYuanDate`,`hb_HuanZheMingCheng`,`hb_YiYuanMingCheng`,`hb_BeiZhu`,`hb_vipId`) values('$hb_RuYuanDate','$hb_ChuYuanDate','$hb_HuanZheMingCheng','$hb_YiYuanMingCheng','$hb_BeiZhu','$hb_vipId');";
+    //return execUpdateSql($mysql, $sql);
+    $countSql = "select count(*) from `huibang_vipBaoXiaoJiLu` WHERE id = '$id'";
+    if (getOne($mysql, $countSql)[0]) {
+        $sql = "Update `bdm246823269_db`.`huibang_vipBaoXiaoJiLu` SET `hb_RuYuanDate`='$hb_RuYuanDate',`hb_ChuYuanDate`='$hb_ChuYuanDate',`hb_HuanZheMingCheng`='$hb_HuanZheMingCheng',`hb_YiYuanMingCheng`='$hb_YiYuanMingCheng',`hb_BeiZhu`='$hb_BeiZhu' WHERE id= '$id' ";
+        return execUpdateSql($mysql, $sql);
+    } else {
+        require_once("vip_create.php");
+        return addVipBaoXiaoJiLu($mysql, $arr);
+    }
 }
 
 function updateVipQiTaShiXiang($mysql, $arr)
