@@ -9,7 +9,9 @@ require($_REQUEST['cls']);
 $par = $_REQUEST['par'];
 $resArr = array();
 if ($par) {
-    // require_once('filter_permissions.php');
+
+
+
     $res = call_user_func($par, $mysql, $_REQUEST);
 
     echo json_encode($res);

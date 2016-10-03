@@ -3,7 +3,9 @@
 function getOne($mysql, $sql)
 {
     $res = mysqli_query($mysql, $sql);
+
     $row = mysqli_fetch_array($res);
+
     return $row;
 }
 
@@ -24,16 +26,24 @@ function execAddSql($mysql, $sql)
 {
     mysqli_query($mysql, $sql);
     $uid = mysqli_insert_id($mysql);
-    return $uid;
+
+    if ($uid) {
+        return array('success' => true, 'info' => $uid);
+    }
 }
 
 function execUpdateSql($mysql, $sql)
 {
     mysqli_query($mysql, $sql);
+    //print_r($mysql);
 
     $rows = $mysql->affected_rows;
-    if($rows){
-        return array('success'=>true,'info'=>$rows);
+    $error = mysqli_errno($mysql);
+    if ($error == 0) {
+        return array('success' => true, 'info' => $rows);
+    } else {
+        return array('success' => false, 'info' => mysqli_error($mysql));
     }
+
 }
 

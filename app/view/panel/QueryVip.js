@@ -176,7 +176,7 @@ Ext.define('guanli.view.panel.QueryVip', {
                             }
                             Ext.Msg.confirm("删除会员", "是否要删除会员" + record.data.hb_vipName, function (isDel) {
                                 console.log(arguments)
-                                if (isDel == "no") {
+                                if (isDel != "yes") {
                                     return;
                                 }
                                 My.AjaxPost(My.vipDeleteUrl + "deleteVipBaseInfo", {id: record.id}, function (response) {

@@ -595,13 +595,13 @@ Ext.define('guanli.view.panel.addVip', {
                     store: Ext.create("Ext.data.Store", {
                         fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_ZhenDuanZhengMing', 'hb_YiYuanMingCheng', 'hb_vipId', 'id'],
                         data: [
-                            {
+                            /*{
                                 hb_RuYuanDate: "",
                                 hb_ChuYuanDate: "",
                                 hb_ZhenDuanZhengMing: "",
                                 "hb_YiYuanMingCheng": "",
                                 hb_vipId: ""
-                            }
+                            }*/
                         ]
                     }),
                     columns: [
@@ -686,14 +686,14 @@ Ext.define('guanli.view.panel.addVip', {
                     store: Ext.create("Ext.data.Store", {
                         fields: ['hb_RuYuanDate', 'hb_ChuYuanDate', 'hb_HuanZheMingCheng', 'YiYuanMingCheng', 'BeiZhu', 'hb_vipId', 'id'],
                         data: [
-                            {
+                            /*{
                                 hb_RuYuanDate: "",
                                 hb_ChuYuanDate: "",
                                 hb_HuanZheMingCheng: "",
                                 "YiYuanMingCheng": "",
                                 "BeiZhu": "",
                                 hb_vipId: ""
-                            }
+                            }*/
                         ]
                     }),
                     columns: [

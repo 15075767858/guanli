@@ -1,7 +1,7 @@
 <?php
 
 
-require_once('mysql_link.php');
+/*require_once('mysql_link.php');
 include_once ('mysql_utils.php');
 
 mysqli_query($mysql, "set names utf8");
@@ -17,8 +17,7 @@ if ($par) {
 echo json_encode($res);
 mysqli_close($mysql);
 
-exit;
-
+exit;*/
 
 
 function readUserByItem($mysql, $arr)
@@ -46,5 +45,3 @@ function readUserInfoById($mysql, $arr)
     $sql = "select * from huibang_user  WHERE id= $id";
     return getOne($mysql, $sql);
 }
-
-

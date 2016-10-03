@@ -147,7 +147,15 @@ Ext.define('guanli.view.user.QueryUser', {
                                 }
                                 My.AjaxPost(My.userDeleteUrl + "deleteUser", {id: record.id}, function (response) {
                                     grid.store.reload();
-                                    Ext.Msg.alert("消息", "删除操作完成" + response.responseText)
+                                    try{
+                                        var ojson = Ext.decode(response.responseText);
+                                        if(ojson.success){
+                                            Ext.Msg.alert("消息", "删除操作完成,有"+ojson.info+"条纪录被改变。")
+                                        }
+                                    }catch (e){
+                                        Ext.Msg.alert("消息", "服务器异常 "+ response.responseText)
+                                    }
+                                    //Ext.Msg.alert("消息", "删除操作完成" + response.responseText)
                                 })
                             })
                         }
