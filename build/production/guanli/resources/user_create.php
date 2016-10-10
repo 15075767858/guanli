@@ -17,9 +17,9 @@ mysqli_close($mysql);
 exit;*/
 
 
-
 function addUser($mysql, $arr)
 {
+
 
     $username = $arr['username'];
     $password = $arr['password'];
@@ -47,8 +47,24 @@ function addUser($mysql, $arr)
     $readVipZhuYuanJiLu = $arr['readVipZhuYuanJiLu'];
     $readVipBaoXiaoJiLu = $arr['readVipBaoXiaoJiLu'];
     $readVipQiTaShiXiang = $arr['readVipQiTaShiXiang'];
+    $addUser=$arr['addUser'];
+    $deleteUser=$arr['deleteUser'];
+    $readUserByItem=$arr['readUserByItem'];
+    $updateUser=$arr['updateUser'];
+
+
+
     $CreateDate = $arr['_dc'];
-    $sql = "insert `bdm246823269_db`.`huibang_user`(`username`,`password`,`user_Manager`,`addVipBaseInfo`,`addVipTiJianBaoGao`,`addVipJiaoFeiJiLu`,`addVipZengSongBaoXian`,`addVipZhuYuanJiLu`,`addVipBaoXiaoJiLu`,`addVipQiTaShiXiang`,`deleteVipBaseInfo`,`updateVipBaseInfo`,`updateVipTiJianBaoGao`,`updateVipJiaoFeiJiLu`,`updateVipZengSongBaoXian`,`updateVipZhuYuanJiLu`,`updateVipBaoXiaoJiLu`,`updateVipQiTaShiXiang`,`readVipBaseInfoByItem`,`readVipBaseInfo`,`readVipTiJianBaoGao`,`readVipJiaoFeiJiLu`,`readVipZengSongBaoXian`,`readVipZhuYuanJiLu`,`readVipBaoXiaoJiLu`,`readVipQiTaShiXiang`,`CreateDate`) values('$username','$password','$user_Manager','$addVipBaseInfo','$addVipTiJianBaoGao','$addVipJiaoFeiJiLu','$addVipZengSongBaoXian','$addVipZhuYuanJiLu','$addVipBaoXiaoJiLu','$addVipQiTaShiXiang','$deleteVipBaseInfo','$updateVipBaseInfo','$updateVipTiJianBaoGao','$updateVipJiaoFeiJiLu','$updateVipZengSongBaoXian','$updateVipZhuYuanJiLu','$updateVipBaoXiaoJiLu','$updateVipQiTaShiXiang','$readVipBaseInfoByItem','$readVipBaseInfo','$readVipTiJianBaoGao','$readVipJiaoFeiJiLu','$readVipZengSongBaoXian','$readVipZhuYuanJiLu','$readVipBaoXiaoJiLu','$readVipQiTaShiXiang','$CreateDate')";
+
+
+    $countSql = "select count(*) from `huibang_user` WHERE username = '$username'";
+    if (getOne($mysql, $countSql)[0]) {
+        //return array('success' => false, 'info' => "会员卡号以存在");
+        echo json_encode(array('success' => false, 'info' => "用户以存在"));
+        exit();
+    }
+    $sql = "insert `bdm246823269_db`.`huibang_user`(`username`,`password`,`user_Manager`,`addVipBaseInfo`,`addVipTiJianBaoGao`,`addVipJiaoFeiJiLu`,`addVipZengSongBaoXian`,`addVipZhuYuanJiLu`,`addVipBaoXiaoJiLu`,`addVipQiTaShiXiang`,`deleteVipBaseInfo`,`updateVipBaseInfo`,`updateVipTiJianBaoGao`,`updateVipJiaoFeiJiLu`,`updateVipZengSongBaoXian`,`updateVipZhuYuanJiLu`,`updateVipBaoXiaoJiLu`,`updateVipQiTaShiXiang`,`readVipBaseInfoByItem`,`readVipBaseInfo`,`readVipTiJianBaoGao`,`readVipJiaoFeiJiLu`,`readVipZengSongBaoXian`,`readVipZhuYuanJiLu`,`readVipBaoXiaoJiLu`,`readVipQiTaShiXiang`,`addUser`,`deleteUser`,`readUserByItem`,`updateUser`,`CreateDate`) values('$username','$password','$user_Manager','$addVipBaseInfo','$addVipTiJianBaoGao','$addVipJiaoFeiJiLu','$addVipZengSongBaoXian','$addVipZhuYuanJiLu','$addVipBaoXiaoJiLu','$addVipQiTaShiXiang','$deleteVipBaseInfo','$updateVipBaseInfo','$updateVipTiJianBaoGao','$updateVipJiaoFeiJiLu','$updateVipZengSongBaoXian','$updateVipZhuYuanJiLu','$updateVipBaoXiaoJiLu','$updateVipQiTaShiXiang','$readVipBaseInfoByItem','$readVipBaseInfo','$readVipTiJianBaoGao','$readVipJiaoFeiJiLu','$readVipZengSongBaoXian','$readVipZhuYuanJiLu','$readVipBaoXiaoJiLu','$readVipQiTaShiXiang','$addUser','$deleteUser','$readUserByItem','$updateUser','$CreateDate')";
+
     return execAddSql($mysql, $sql);
 }
 

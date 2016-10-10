@@ -24,6 +24,7 @@ mysqli_close($mysql);
 
 exit;*/
 
+
 function readVipBaseInfoByItem($mysql, $arr)
 {
 
@@ -36,11 +37,11 @@ function readVipBaseInfoByItem($mysql, $arr)
     $start = $_REQUEST['start'];
     $arr = array();
     $sql = "select * from huibang_vipbaseinfo WHERE $name LIKE  '%$value%' ORDER BY $sortProperty $sortDirection LIMIT $start,$limit";
-    //echo $sql;
     $resArr = getArray($mysql, $sql);
     $arr['topics'] = $resArr;
     $countSql="select count(*) from huibang_vipbaseinfo WHERE $name LIKE  '%$value%'";
     $arr['totalCount'] = getOne($mysql,$countSql)[0];
+
     return $arr;
 }
 
@@ -52,12 +53,14 @@ function readVipBaseInfo($mysql, $arr)
     return getOne($mysql, $sql);
 }
 
+
 function readVipTiJianBaoGao($mysql, $arr)
 {
     $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipTiJianBaoGao WHERE hb_vipId = $vipId";
     return getOne($mysql, $sql);
 }
+
 
 function readVipJiaoFeiJiLu($mysql, $arr)
 {
@@ -68,6 +71,7 @@ function readVipJiaoFeiJiLu($mysql, $arr)
     return getArray($mysql, $sql);
 }
 
+
 function readVipZengSongBaoXian($mysql, $arr)
 {
     $vipId = $_REQUEST['vipId'];
@@ -76,12 +80,14 @@ function readVipZengSongBaoXian($mysql, $arr)
     return getOne($mysql, $sql);
 }
 
+
 function readVipZhuYuanJiLu($mysql, $arr)
 {
     $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipZhuYuanJiLu WHERE hb_vipId= $vipId";
     return getArray($mysql, $sql);
 }
+
 
 function readVipBaoXiaoJiLu($mysql, $arr)
 {
@@ -90,11 +96,13 @@ function readVipBaoXiaoJiLu($mysql, $arr)
     return getArray($mysql, $sql);
 }
 
+
 function readVipQiTaShiXiang($mysql, $arr)
 {
     $vipId = $_REQUEST['vipId'];
     $sql = "select * from huibang_vipQiTaShiXiang WHERE hb_vipId= $vipId";
     return getOne($mysql, $sql);
 }
+
 
 

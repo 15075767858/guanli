@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="12ac5e65-4cd3-4f8b-a0ad-f4edf21a0c7a" name="smartio" url="http://www.smartio.cc">
-        <fileTransfer host="www.smartio.cc" port="21" username="qxu2063030161">
+        <fileTransfer host="www.smartio.cc" port="21" password="dfcbdfc8dfc9dfcedf9bdf98df99df9edf9fdf9c" username="qxu2063030161">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

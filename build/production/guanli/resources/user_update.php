@@ -63,9 +63,17 @@ function updateUser($mysql, $arr)
     $readVipBaoXiaoJiLu = $arr['readVipBaoXiaoJiLu'];
     $readVipQiTaShiXiang = $arr['readVipQiTaShiXiang'];
 
+    $addUser=$arr['addUser'];
+    $deleteUser=$arr['deleteUser'];
+    $readUserByItem=$arr['readUserByItem'];
+    $updateUser=$arr['updateUser'];
 
 
-    $sql="Update `bdm246823269_db`.`huibang_user` SET `username`='$username',`password`='$password',`user_Manager`='$user_Manager',`addVipBaseInfo`='$addVipBaseInfo',`addVipTiJianBaoGao`='$addVipTiJianBaoGao',`addVipJiaoFeiJiLu`='$addVipJiaoFeiJiLu',`addVipZengSongBaoXian`='$addVipZengSongBaoXian',`addVipZhuYuanJiLu`='$addVipZhuYuanJiLu',`addVipBaoXiaoJiLu`='$addVipBaoXiaoJiLu',`addVipQiTaShiXiang`='$addVipQiTaShiXiang',`deleteVipBaseInfo`='$deleteVipBaseInfo',`updateVipBaseInfo`='$updateVipBaseInfo',`updateVipTiJianBaoGao`='$updateVipTiJianBaoGao',`updateVipJiaoFeiJiLu`='$updateVipJiaoFeiJiLu',`updateVipZengSongBaoXian`='$updateVipZengSongBaoXian',`updateVipZhuYuanJiLu`='$updateVipZhuYuanJiLu',`updateVipBaoXiaoJiLu`='$updateVipBaoXiaoJiLu',`updateVipQiTaShiXiang`='$updateVipQiTaShiXiang',`readVipBaseInfoByItem`='$readVipBaseInfoByItem',`readVipBaseInfo`='$readVipBaseInfo',`readVipTiJianBaoGao`='$readVipTiJianBaoGao',`readVipJiaoFeiJiLu`='$readVipJiaoFeiJiLu',`readVipZengSongBaoXian`='$readVipZengSongBaoXian',`readVipZhuYuanJiLu`='$readVipZhuYuanJiLu',`readVipBaoXiaoJiLu`='$readVipBaoXiaoJiLu',`readVipQiTaShiXiang`='$readVipQiTaShiXiang'  WHERE id ='$id' ";
+
+
+
+    $sql="Update `bdm246823269_db`.`huibang_user` SET `username`='$username',`password`='$password',`user_Manager`='$user_Manager',`addVipBaseInfo`='$addVipBaseInfo',`addVipTiJianBaoGao`='$addVipTiJianBaoGao',`addVipJiaoFeiJiLu`='$addVipJiaoFeiJiLu',`addVipZengSongBaoXian`='$addVipZengSongBaoXian',`addVipZhuYuanJiLu`='$addVipZhuYuanJiLu',`addVipBaoXiaoJiLu`='$addVipBaoXiaoJiLu',`addVipQiTaShiXiang`='$addVipQiTaShiXiang',`deleteVipBaseInfo`='$deleteVipBaseInfo',`updateVipBaseInfo`='$updateVipBaseInfo',`updateVipTiJianBaoGao`='$updateVipTiJianBaoGao',`updateVipJiaoFeiJiLu`='$updateVipJiaoFeiJiLu',`updateVipZengSongBaoXian`='$updateVipZengSongBaoXian',`updateVipZhuYuanJiLu`='$updateVipZhuYuanJiLu',`updateVipBaoXiaoJiLu`='$updateVipBaoXiaoJiLu',`updateVipQiTaShiXiang`='$updateVipQiTaShiXiang',`readVipBaseInfoByItem`='$readVipBaseInfoByItem',`readVipBaseInfo`='$readVipBaseInfo',`readVipTiJianBaoGao`='$readVipTiJianBaoGao',`readVipJiaoFeiJiLu`='$readVipJiaoFeiJiLu',`readVipZengSongBaoXian`='$readVipZengSongBaoXian',`readVipZhuYuanJiLu`='$readVipZhuYuanJiLu',`readVipBaoXiaoJiLu`='$readVipBaoXiaoJiLu',`readVipQiTaShiXiang`='$readVipQiTaShiXiang',`addUser`='$addUser',`deleteUser`='$deleteUser',`readUserByItem`='$readUserByItem',`updateUser`='$updateUser'  WHERE id ='$id' ";
+
 
     return execUpdateSql($mysql, $sql);
 }

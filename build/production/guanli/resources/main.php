@@ -10,10 +10,13 @@ $par = $_REQUEST['par'];
 $resArr = array();
 if ($par) {
 
-
+    session_start();
+    if (!$_SESSION[$par]) {
+        echo json_encode(array('session' => false, 'info' => '没有权限'));
+        exit();
+    }
 
     $res = call_user_func($par, $mysql, $_REQUEST);
-
     echo json_encode($res);
 }
 //echo json_encode($resArr);

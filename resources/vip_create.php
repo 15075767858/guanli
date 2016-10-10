@@ -56,9 +56,15 @@ function addVipBaseInfo($mysql, $arr)
 
     $countSql = "select count(*) from `huibang_vipbaseinfo` WHERE hb_vipCardNumber = '$hb_vipCardNumber'";
     if (getOne($mysql, $countSql)[0]) {
-
         //return array('success' => false, 'info' => "会员卡号以存在");
         echo json_encode(array('success' => false, 'info' => "会员卡号以存在"));
+        exit();
+    }
+    $countSql = "select count(*) from `huibang_vipbaseinfo` WHERE hb_vipIdNumber = '$hb_vipIdNumber'";
+    if (getOne($mysql, $countSql)[0]) {
+
+        //return array('success' => false, 'info' => "会员卡号以存在");
+        echo json_encode(array('success' => false, 'info' => "身份证号以存在"));
         exit();
     }
 
